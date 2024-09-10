@@ -1,7 +1,12 @@
+using helpmepickmymain.Database;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<HmpmmDbContext>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("HelpMePickMyMainDbConnectionString")));
 
 var app = builder.Build();
 
