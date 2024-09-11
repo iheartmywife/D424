@@ -1,0 +1,96 @@
+﻿@model List<helpmepickmymain.Models.Domain.WowClass>
+@{
+}
+<div class="bg-secondary bg-opacity-10 py-2">
+    <div class="container">
+        <h1>Show All Classes - Admin Functionality</h1>
+    </div>
+</div>
+
+<div class="container py-5">
+    @if (Model == null)
+    {
+        <p>The Model is Null</p>
+    }
+    else if (Model.Any())
+    {
+        <div class="container py-2">
+            <h4>Note to Admin: To delete any Faction, you must assign all related races to a different faction</h4>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Races</th>
+                    <th>Roles</th>
+                    <th>Specs</th>
+                    <th> </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var wowClass in Model)
+                {
+                    <tr>
+                        <td>@wowClass.Id</td>
+                        <td>@wowClass.Name</td>
+                        <td>
+                            <div class="d-flex">
+                                @foreach (var race in wowClass.Races)
+                                {
+                                    if (race == null)
+                                    {
+                                        race.Name = "None";
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-secondary">@race.Name</span>
+                                    }
+                                }
+                            </div>
+                        </td>
+                        <td>
+                            <div class="d-flex">
+                                @foreach (var role in wowClass.Roles)
+                                {
+                                    if (role == null)
+                                    {
+                                        role.Name = "None";
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-secondary">@role.Name</span>
+                                    }
+                                }
+                            </div>
+                        </td>
+                        <td>
+                            <div class="d-flex">
+                                @foreach (var spec in wowClass.Specs)
+                                {
+                                    if (spec == null)
+                                    {
+                                        spec.Name = "None";
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-secondary">@spec.Name</span>
+                                    }
+                                }
+                            </div>
+                        </td>
+                        <td>
+                            <a asp-area="" asp-controller="AdminWowClass"
+                               asp-action="Edit"
+                               asp-route-id="@wowClass.Id">Edit</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No Factions Found</p>
+    }
+</div>

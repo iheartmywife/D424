@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using helpmepickmymain.Database;
 
@@ -11,9 +12,11 @@ using helpmepickmymain.Database;
 namespace helpmepickmymain.Migrations
 {
     [DbContext(typeof(HmpmmDbContext))]
-    partial class HmpmmDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240911101823_Initial Migration 2")]
+    partial class InitialMigration2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -73,7 +76,7 @@ namespace helpmepickmymain.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("FactionId")
+                    b.Property<Guid>("FactionId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Name")
@@ -119,7 +122,7 @@ namespace helpmepickmymain.Migrations
                     b.Property<Guid>("RoleId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("WowClassId")
+                    b.Property<Guid>("WowClassId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("WowheadLink")
@@ -184,7 +187,9 @@ namespace helpmepickmymain.Migrations
                 {
                     b.HasOne("helpmepickmymain.Models.Domain.Faction", "Faction")
                         .WithMany("Races")
-                        .HasForeignKey("FactionId");
+                        .HasForeignKey("FactionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Faction");
                 });
@@ -199,7 +204,9 @@ namespace helpmepickmymain.Migrations
 
                     b.HasOne("helpmepickmymain.Models.Domain.WowClass", "WowClass")
                         .WithMany("Specs")
-                        .HasForeignKey("WowClassId");
+                        .HasForeignKey("WowClassId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Role");
 

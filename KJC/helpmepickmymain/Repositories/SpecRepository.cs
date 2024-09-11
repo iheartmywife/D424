@@ -45,7 +45,7 @@ namespace helpmepickmymain.Repositories
         {
             return await hmpmmDbContext.Specs
                 .Include(x => x.Role)
-                //.Include(x => x.WowClass)
+                .Include(x => x.WowClass)
                 .FirstOrDefaultAsync(x => x.Id == id);
         }
 

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using helpmepickmymain.Database;
 
@@ -11,9 +12,11 @@ using helpmepickmymain.Database;
 namespace helpmepickmymain.Migrations
 {
     [DbContext(typeof(HmpmmDbContext))]
-    partial class HmpmmDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240911082401_UpdateRoleToClassRelationship")]
+    partial class UpdateRoleToClassRelationship
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -192,7 +195,7 @@ namespace helpmepickmymain.Migrations
             modelBuilder.Entity("helpmepickmymain.Models.Domain.Spec", b =>
                 {
                     b.HasOne("helpmepickmymain.Models.Domain.Role", "Role")
-                        .WithMany("Specs")
+                        .WithMany()
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -209,11 +212,6 @@ namespace helpmepickmymain.Migrations
             modelBuilder.Entity("helpmepickmymain.Models.Domain.Faction", b =>
                 {
                     b.Navigation("Races");
-                });
-
-            modelBuilder.Entity("helpmepickmymain.Models.Domain.Role", b =>
-                {
-                    b.Navigation("Specs");
                 });
 
             modelBuilder.Entity("helpmepickmymain.Models.Domain.WowClass", b =>

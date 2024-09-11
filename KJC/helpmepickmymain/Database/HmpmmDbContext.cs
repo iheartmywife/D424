@@ -14,5 +14,7 @@ namespace helpmepickmymain.Database
         public DbSet<Role> Roles { get; set; }
         public DbSet<Spec> Specs { get; set; }
         public DbSet<WowClass> WowClasses { get; set; }
+
     }
+
 }

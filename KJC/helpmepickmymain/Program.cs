@@ -13,6 +13,7 @@ builder.Services.AddScoped<IRoleRepository, RoleRepository>();
 builder.Services.AddScoped<ISpecRepository, SpecRepository>();
 builder.Services.AddScoped<IRaceRepository, RaceRepository>();
 builder.Services.AddScoped<IFactionRepository, FactionRepository>();
+builder.Services.AddScoped<IWowClassRepository, WowClassRepository>();
 
 var app = builder.Build();
 

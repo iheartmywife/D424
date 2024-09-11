@@ -1,4 +1,7 @@
-﻿namespace helpmepickmymain.Models.ViewModels
+﻿using helpmepickmymain.Models.Domain;
+using Microsoft.AspNetCore.Mvc.Rendering;
+
+namespace helpmepickmymain.Models.ViewModels
 {
     public class AddRoleRequest
     {
