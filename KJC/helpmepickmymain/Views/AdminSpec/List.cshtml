@@ -1,0 +1,52 @@
+﻿@model List<helpmepickmymain.Models.Domain.Spec>
+@{
+}
+
+<div class="bg-secondary bg-opacity-10 py-2">
+    <div class="container">
+        <h1>Show All Specs - Admin Functionality</h1>
+    </div>
+</div>
+
+<div class="container py-5">
+    @if (Model == null)
+    {
+        <p>The Model is Null</p>
+    }
+    else if (Model.Any())
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Role</th>
+                    <th>Class</th>
+                    <th>WoWHead Link</th>
+                    <th> </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var spec in Model)
+                {
+                    <tr>
+                        <td>@spec.Id</td>
+                        <td>@spec.Name</td>
+                        <td>@spec.Role</td>
+                        <td>@(spec.WowClass != null ? spec.WowClass.Name : "None")</td>
+                        <td>@spec.WowheadLink</td>
+                        <td>
+                            <a asp-area="" asp-controller="AdminSpec"
+                               asp-action="Edit"
+                               asp-route-id="@spec.Id">Edit</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No Specs Found</p>
+    }
+</div>

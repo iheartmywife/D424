@@ -1,0 +1,70 @@
+﻿@model helpmepickmymain.Models.ViewModels.EditSpecRequest
+
+@{
+}
+
+<div class="bg-secondary bg-opacity-10 py-2">
+    <div class="container">
+        <h1>Edit Spec - Admin Functionality</h1>
+    </div>
+</div>
+<div class="container py-5">
+
+    @if (Model == null)
+    {
+        <p>Model is Null</p>
+    }
+    else if (Model != null)
+    {
+        <div class="container py-5">
+            <form method="post">
+                <div class="mb-3">
+                    <label class="form-label">Id</label>
+                    <input type="text" class="form-control" id="id" asp-for="Id" readonly/>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" asp-for="Name" />
+                </div>
+                @* <div class="mb-3">
+                    <label class="form-label">Class</label>
+                    <select class="form-select" asp-items="@Model.AvailableWowClasses" asp-for="SelectedWowClass">
+                    </select>
+                </div> *@
+                <div class="mb-3">
+                    <label class="form-label">Role</label>
+                    <select class="form-select" asp-items="@Model.AvailableRoles" asp-for="SelectedRole">
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">WoWHead Guide Link</label>
+                    <input type="text" class="form-control" id="wowheadlink" asp-for="WowheadLink" />
+                </div>
+                <div class="mb-3 d-flex">
+                    <button type="submit" class="btn btn-dark">Update</button>
+                    <button type="submit" class="btn btn-danger" asp-area="" asp-controller="AdminSpec" asp-action="Delete">Delete</button>
+                </div>
+            </form>
+        </div>
+    }
+    else
+    {
+    <p>Specs not found</p>
+    }
+</div>
+        
+
+@*  public Guid Id { get; set; }
+    public string Name { get; set; }
+    public Role Role { get; set; }
+    public WowClass WowClass { get; set; }
+    public string WowheadLink { get; set; }
+
+    // Display Available Roles / Classes
+
+    public IEnumerable<SelectListItem>
+    AvailableRoles { get; set; }
+    public string SelectedRole { get; set; }
+    public IEnumerable<SelectListItem>
+    AvailableWowClasses { get; set; }
+    public string SelectedWowClass { get; set; } *@

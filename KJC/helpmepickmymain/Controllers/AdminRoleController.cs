@@ -1,17 +1,19 @@
 ﻿using helpmepickmymain.Database;
 using helpmepickmymain.Models.Domain;
 using helpmepickmymain.Models.ViewModels;
+using helpmepickmymain.Repositories;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace helpmepickmymain.Controllers
 {
     public class AdminRoleController : Controller
     {
-        private readonly HmpmmDbContext hmpmmDbContext;
+        private readonly IRoleRepository roleRepository;
 
-        public AdminRoleController(HmpmmDbContext hmpmmDbContext)
-        {
-            this.hmpmmDbContext = hmpmmDbContext;
+        public AdminRoleController(IRoleRepository roleRepository)
+        {;
+            this.roleRepository = roleRepository;
         }
 
         [HttpGet]
@@ -22,7 +24,7 @@ namespace helpmepickmymain.Controllers
 
         [HttpPost]
         [ActionName("Add")]
-        public IActionResult Add(AddRoleRequest addRoleRequest)
+        public async Task<IActionResult> Add(AddRoleRequest addRoleRequest)
         {
             var role = new Role
             {
@@ -30,25 +32,24 @@ namespace helpmepickmymain.Controllers
                 DisplayName = addRoleRequest.DisplayName,
             };
 
-            hmpmmDbContext.Roles.Add(role);
-            hmpmmDbContext.SaveChanges();
+            await roleRepository.AddRoleAsync(role);
 
             return RedirectToAction("List");
         }
 
         [HttpGet]
         [ActionName("List")]
-        public IActionResult List()
+        public async Task<IActionResult> List()
         {
-            var roles = hmpmmDbContext.Roles.ToList();
+            var roles = await roleRepository.GetAllRolesAsync();
 
 
             return View(roles);
         }
 
-        public IActionResult Edit(Guid id)
+        public async Task<IActionResult> Edit(Guid id)
         {
-            var role = hmpmmDbContext.Roles.FirstOrDefault(x => x.Id == id);
+            var role = await roleRepository.GetRoleAsync(id);
 
             if (role != null)
             {
@@ -65,7 +66,7 @@ namespace helpmepickmymain.Controllers
         }
 
         [HttpPost]
-        public IActionResult Edit(EditRoleRequest editRoleRequest)
+        public async Task<IActionResult> Edit(EditRoleRequest editRoleRequest)
         {
             var role = new Role
             {
@@ -74,29 +75,27 @@ namespace helpmepickmymain.Controllers
                 DisplayName = editRoleRequest.DisplayName,
             };
 
-            var existingRole = hmpmmDbContext.Roles.Find(role.Id);
-            if (existingRole != null)
-            {
-                existingRole.Name = role.Name;
-                existingRole.DisplayName = role.DisplayName;
+            var updatedRole = await roleRepository.UpdateRoleAsync(role);
 
-                hmpmmDbContext.SaveChanges();
+            if (updatedRole != null)
+            {
                 //show success notification
-                return RedirectToAction("Edit", new { id = editRoleRequest.Id });
             }
-            //show failure notification
+            else
+            {
+                //show failure notification
+            }
+
             return RedirectToAction("Edit", new { id = editRoleRequest.Id });
         }
 
         [HttpPost]
-        public IActionResult Delete(EditRoleRequest editRoleRequest)
+        public async Task<IActionResult> Delete(EditRoleRequest editRoleRequest)
         {
-            var role = hmpmmDbContext.Roles.Find(editRoleRequest.Id);
+            var deletedRole = await roleRepository.DeleteRoleAsync(editRoleRequest.Id);
 
-            if (role != null)
+            if (deletedRole != null)
             {
-                hmpmmDbContext.Roles.Remove(role);
-                hmpmmDbContext.SaveChanges();
 
                 //show success notification
                 return RedirectToAction("List");
