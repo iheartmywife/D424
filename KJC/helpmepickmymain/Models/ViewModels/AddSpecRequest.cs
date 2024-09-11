@@ -12,8 +12,8 @@ namespace helpmepickmymain.Models.ViewModels
 
         // Display Available Roles / Classes
 
-        public IEnumerable<SelectListItem> AvailableRoles { get; set; }
-        public string SelectedRole { get; set; }
+        public IEnumerable<SelectListItem> ?AvailableRoles { get; set; }
+        public string ?SelectedRole { get; set; }
         public IEnumerable<SelectListItem> ?AvailableWowClasses { get; set; }
         public string ?SelectedWowClass { get; set; }
 

@@ -11,27 +11,29 @@ namespace helpmepickmymain.Controllers
     {
         private readonly IRoleRepository roleRepository;
         private readonly ISpecRepository specRepository;
+        private readonly IWowClassRepository wowClassRepository;
 
-        public AdminSpecController(IRoleRepository roleRepository, ISpecRepository specRepository) //TO-DO ADD CLASS REPO
+        public AdminSpecController(IRoleRepository roleRepository, ISpecRepository specRepository, IWowClassRepository wowClassRepository) //TO-DO ADD CLASS REPO
         {
             this.roleRepository = roleRepository;
             this.specRepository = specRepository;
+            this.wowClassRepository = wowClassRepository;
         }
 
         [HttpGet]
         public async Task<IActionResult> Add()
         {
-            // get Roles from Repository
+            // get Roles and classes from Repository
             var roles = await roleRepository.GetAllRolesAsync();
+            var wowClasses = await wowClassRepository.GetAllWowClassesAsync();
 
             var model = new AddSpecRequest
             {
-                AvailableRoles = roles.Select(x => new SelectListItem { Text = x.DisplayName, Value = x.Id.ToString() })
+                AvailableRoles = roles.Select(x => new SelectListItem { Text = x.DisplayName, Value = x.Id.ToString() }),
+                AvailableWowClasses = wowClasses.Select(x => new SelectListItem { Text = x.Name, Value = x.Id.ToString() })
             };
 
             return View(model);
-
-            //TODO get classes from repository
         }
 
         [HttpPost]
@@ -51,14 +53,14 @@ namespace helpmepickmymain.Controllers
                 spec.Role = selectedRole;
             }
 
-            ////getting all classes
-            //var selectedWowClassId = Guid.Parse(addSpecRequest.SelectedWowClass);
-            //var selectedWowClass = await classRepository.GetClassAsync(selectedWowClassId);
+            //getting all classes
+            var selectedWowClassId = Guid.Parse(addSpecRequest.SelectedWowClass);
+            var selectedWowClass = await wowClassRepository.GetWowClassAsync(selectedWowClassId);
 
-            //if (selectedWowClass != null)
-            //{
-            //    spec.WowClass = selectedWowClass;
-            //}
+            if (selectedWowClass != null)
+            {
+                spec.WowClass = selectedWowClass;
+            }
 
             //mapping spec back to domain model
             await specRepository.AddSpecAsync(spec);
@@ -78,6 +80,7 @@ namespace helpmepickmymain.Controllers
         {
             var currentSpec = await specRepository.GetSpecAsync(id);
             var roleDomainModel = await roleRepository.GetAllRolesAsync();
+            var wowClassDomainModel = await wowClassRepository.GetAllWowClassesAsync();
 
             if (currentSpec != null)
             {
@@ -86,7 +89,6 @@ namespace helpmepickmymain.Controllers
                     Id = currentSpec.Id,
                     Name = currentSpec.Name,
                     Role = currentSpec.Role,
-                    //WowClass = currentSpec.WowClass,
                     WowheadLink = currentSpec.WowheadLink,
                     AvailableRoles = roleDomainModel.Select(x => new SelectListItem
                     {
@@ -94,7 +96,16 @@ namespace helpmepickmymain.Controllers
                         Value = x.Id.ToString(),
                         Selected = (x.Id == currentSpec.Role.Id)
                     }),
-                    SelectedRole = currentSpec.Role.Id.ToString()
+                    SelectedRole = currentSpec.Role.Id.ToString(),
+
+
+                    AvailableWowClasses = wowClassDomainModel.Select(x => new SelectListItem
+                    {
+                        Text = x.Name,
+                        Value = x.Id.ToString(),
+                        Selected = (x.Id == currentSpec.WowClass.Id)
+                    }),
+                    SelectedWowClass = currentSpec.WowClass.Id.ToString(),
                 };
 
                 return View(model);
@@ -116,7 +127,7 @@ namespace helpmepickmymain.Controllers
                 Id = editSpecRequest.Id,
                 Name = editSpecRequest.Name,
                 Role = selectedRole,
-                //WowClass = editSpecRequest.WowClass,
+                WowClass = editSpecRequest.WowClass,
                 WowheadLink = editSpecRequest.WowheadLink,
             };
 

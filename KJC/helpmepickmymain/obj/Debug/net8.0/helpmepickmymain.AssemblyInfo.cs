@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("helpmepickmymain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f328918c53e151932f61c3e9764c42894249df53")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79c2ea080cf6158a7aa773fdcc9b08a77d714df0")]
 [assembly: System.Reflection.AssemblyProductAttribute("helpmepickmymain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("helpmepickmymain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

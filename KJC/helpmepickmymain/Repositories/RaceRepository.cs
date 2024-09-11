@@ -47,7 +47,7 @@ namespace helpmepickmymain.Repositories
         {
             return await hmpmmDbContext.Races
                 .Include(x => x.Faction)
-                //.Include(x => x.WowClasses)
+                .Include(x => x.WowClasses)
                 .FirstOrDefaultAsync(x => x.Id == id);
         }
 
@@ -55,7 +55,7 @@ namespace helpmepickmymain.Repositories
         {
             var existingRace = await hmpmmDbContext.Races
                 .Include(x => x.Faction)
-                //.Include(x => x.WowClasses)
+                .Include(x => x.WowClasses)
                 .FirstOrDefaultAsync(x => x.Id == race.Id);
 
             if (existingRace != null)
@@ -63,7 +63,7 @@ namespace helpmepickmymain.Repositories
                 existingRace.Id = race.Id;
                 existingRace.Name = race.Name;
                 existingRace.Faction = race.Faction;
-                //existingSpec.WowClasses = Spec.WowClasses;
+                existingRace.WowClasses = race.WowClasses;
 
                 await hmpmmDbContext.SaveChangesAsync();
                 return existingRace;

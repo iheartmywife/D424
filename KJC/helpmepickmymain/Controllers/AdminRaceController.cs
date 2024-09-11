@@ -10,11 +10,13 @@ namespace helpmepickmymain.Controllers
     {
         private readonly IRaceRepository raceRepository;
         private readonly IFactionRepository factionRepository;
+        private readonly IWowClassRepository wowClassRepository;
 
-        public AdminRaceController(IRaceRepository raceRepository, IFactionRepository factionRepository) //TO-DO: IMPLEMENT FACTION AND CLASS REPOS
+        public AdminRaceController(IRaceRepository raceRepository, IFactionRepository factionRepository, IWowClassRepository wowClassRepository) //TO-DO: IMPLEMENT FACTION AND CLASS REPOS
         {
             this.raceRepository = raceRepository;
             this.factionRepository = factionRepository;
+            this.wowClassRepository = wowClassRepository;
         }
 
         [HttpGet]
@@ -23,12 +25,12 @@ namespace helpmepickmymain.Controllers
             //UNCOMMENT WHEN YOU IMPLEMENT THE CORRESPONDING CLASS
 
             var factions = await factionRepository.GetAllFactionsAsync();
-            //var wowClasses = await wowClassesRepository.GetAllWowClassesAsync();
+            var wowClasses = await wowClassRepository.GetAllWowClassesAsync();
 
             var model = new AddRaceRequest
             {
                 AvailableFactions = factions.Select(x => new SelectListItem { Text = x.Name, Value = x.Id.ToString() }),
-                //AvailableWowClasses = wowClasses.Select(x => new SelectListItem { Text = x.DisplayName, Value = x.Id.ToString() })
+                AvailableWowClasses = wowClasses.Select(x => new SelectListItem { Text = x.Name, Value = x.Id.ToString() })
             };
             //TO DO ADD MODEL TO THE VIEW
             return View(model);
@@ -43,19 +45,19 @@ namespace helpmepickmymain.Controllers
             {
                 Name = addRaceRequest.Name,
             };
-            ////getting all classes
-            //var selectedWowClasses = new List<WowClass>();
-            //foreach (var selectedWowClassId in addRaceRequest.SelectedWowClasses)
-            //{
-            //    var AsGuid = Guid.Parse(selectedWowClassId);
-            //    var existingWowClass = await classRepository.GetClassAsync(AsGuid);
+            //getting all classes
+            var selectedWowClasses = new List<WowClass>();
+            foreach (var selectedWowClassId in addRaceRequest.SelectedWowClasses)
+            {
+                var AsGuid = Guid.Parse(selectedWowClassId);
+                var existingWowClass = await wowClassRepository.GetWowClassAsync(AsGuid);
 
-            //    if (existingWowClass != null)
-            //    {
-            //        selectedWowClasses.Add(existingWowClass);
-            //    }
-            //}
-            //race.WowClasses = selectedWowClasses;
+                if (existingWowClass != null)
+                {
+                    selectedWowClasses.Add(existingWowClass);
+                }
+            }
+            race.WowClasses = selectedWowClasses;
 
             //getting selectedFaction
             var selectedFactionId = Guid.Parse(addRaceRequest.SelectedFaction);
@@ -68,7 +70,6 @@ namespace helpmepickmymain.Controllers
             }
             //todo: Add in class!
 
-            //mapping spec back to domain model
             await raceRepository.AddRaceAsync(race);
 
             return RedirectToAction("Add");
@@ -86,7 +87,7 @@ namespace helpmepickmymain.Controllers
         {
             var currentRace = await raceRepository.GetRaceAsync(id);
             var factionDomainModel = await factionRepository.GetAllFactionsAsync();
-            //var wowClassDomainModel = await WowClassRepository.GetAllRacesAsync();
+            var wowClassDomainModel = await wowClassRepository.GetAllWowClassesAsync();
 
             if (currentRace != null)
             {
@@ -101,15 +102,15 @@ namespace helpmepickmymain.Controllers
                         Value = x.Id.ToString(),
                         Selected = (x.Id == currentRace.Faction.Id)
                     }),
-                    SelectedFaction = currentRace.Faction.Id.ToString()
+                    SelectedFaction = currentRace.Faction.Id.ToString(),
 
-                    //WowClasses = currentSpec.WowClasses,
-                    //AvailableClasses = wowClassDomainModel.Select(x => new SelectListItem
-                    //{
-                    //    Text = x.Name,
-                    //    value = x.id.tostring(),
-                    //}),
-                    //SelectedWowClasses = currentRace.WowClasses.Select(x => x.Id.ToString()).ToArray(),
+                    WowClasses = currentRace.WowClasses,
+                    AvailableWowClasses = wowClassDomainModel.Select(x => new SelectListItem
+                    {
+                        Text = x.Name,
+                        Value = x.Id.ToString(),
+                    }),
+                    SelectedWowClasses = currentRace.WowClasses.Select(x => x.Id.ToString()).ToArray(),
                 };
 
                 return View(model);
@@ -133,21 +134,21 @@ namespace helpmepickmymain.Controllers
                 Faction = selectedFaction,
             };
 
-            //var selectedWowClasses = new List<WowClass>();
-            //foreach (var selectedWowClass in editRaceRequest.SelectedWowClasses)
-            //{
-            //    if (Guid.TryParse(selectedWowClass, out var wowClass))
-            //    {
-            //        var foundWowClass = await classRepository.GetWowClassAsync(wowClass);
+            var selectedWowClasses = new List<WowClass>();
+            foreach (var selectedWowClass in editRaceRequest.SelectedWowClasses)
+            {
+                if (Guid.TryParse(selectedWowClass, out var wowClass))
+                {
+                    var foundWowClass = await wowClassRepository.GetWowClassAsync(wowClass);
 
-            //        if (foundWowClass != null)
-            //        {
-            //            selectedWowClasses.Add(foundWowClass);
-            //        }
-            //    }
-            //}
+                    if (foundWowClass != null)
+                    {
+                        selectedWowClasses.Add(foundWowClass);
+                    }
+                }
+            }
 
-            //raceDomainModel.WowClasses = selectedWowClasses;
+            raceDomainModel.WowClasses = selectedWowClasses;
 
             var updatedRace = await raceRepository.UpdateRaceAsync(raceDomainModel);
 

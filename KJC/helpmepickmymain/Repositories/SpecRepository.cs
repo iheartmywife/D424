@@ -53,7 +53,7 @@ namespace helpmepickmymain.Repositories
         {
             var existingSpec = await hmpmmDbContext.Specs
                 .Include(x => x.Role)
-                //.Include(x => x.WowClass)
+                .Include(x => x.WowClass)
                 .FirstOrDefaultAsync(x => x.Id ==  Spec.Id);
 
             if (existingSpec != null)
@@ -62,7 +62,7 @@ namespace helpmepickmymain.Repositories
                 existingSpec.Name = Spec.Name;
                 existingSpec.Role = Spec.Role;
                 existingSpec.WowheadLink = Spec.WowheadLink;
-                //existingSpec.WowClass = Spec.WowClass;
+                existingSpec.WowClass = Spec.WowClass;
 
                 await hmpmmDbContext.SaveChangesAsync();
                 return existingSpec;
