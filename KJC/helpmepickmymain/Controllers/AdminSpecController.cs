@@ -3,6 +3,7 @@ using helpmepickmymain.Models.ViewModels;
 using helpmepickmymain.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Diagnostics;
 
 namespace helpmepickmymain.Controllers
 {
@@ -11,7 +12,7 @@ namespace helpmepickmymain.Controllers
         private readonly IRoleRepository roleRepository;
         private readonly ISpecRepository specRepository;
 
-        public AdminSpecController(IRoleRepository roleRepository, ISpecRepository specRepository)
+        public AdminSpecController(IRoleRepository roleRepository, ISpecRepository specRepository) //TO-DO ADD CLASS REPO
         {
             this.roleRepository = roleRepository;
             this.specRepository = specRepository;
@@ -50,7 +51,14 @@ namespace helpmepickmymain.Controllers
                 spec.Role = selectedRole;
             }
 
-            //todo: Add in class!
+            ////getting all classes
+            //var selectedWowClassId = Guid.Parse(addSpecRequest.SelectedWowClass);
+            //var selectedWowClass = await classRepository.GetClassAsync(selectedWowClassId);
+
+            //if (selectedWowClass != null)
+            //{
+            //    spec.WowClass = selectedWowClass;
+            //}
 
             //mapping spec back to domain model
             await specRepository.AddSpecAsync(spec);

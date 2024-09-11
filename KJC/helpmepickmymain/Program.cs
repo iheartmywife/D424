@@ -11,6 +11,7 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("HelpMePickMyMain
 
 builder.Services.AddScoped<IRoleRepository, RoleRepository>();
 builder.Services.AddScoped<ISpecRepository, SpecRepository>();
+builder.Services.AddScoped<IRaceRepository, RaceRepository>();
 
 var app = builder.Build();
 

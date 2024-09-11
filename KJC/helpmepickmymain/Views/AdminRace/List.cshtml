@@ -1,0 +1,64 @@
+﻿@model List<helpmepickmymain.Models.Domain.Race>
+@{
+}
+<div class="bg-secondary bg-opacity-10 py-2">
+    <div class="container">
+        <h1>Show All Specs - Admin Functionality</h1>
+    </div>
+</div>
+
+<div class="container py-5">
+    @if (Model == null)
+    {
+        <p>The Model is Null</p>
+    }
+    else if (Model.Any())
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Faction</th>
+                    <th>Classes</th>
+                    <th> </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var race in Model)
+                {
+                    <tr>
+                        <td>@race.Id</td>
+                        <td>@race.Name</td>
+                        <td>@(race.Faction != null ? race.Faction.Name : "None")</td>
+                        @* <td>@(race.WowClasses != null ? race.WowClasses.Name : "None")</td> *@
+                        <td>
+                            <div class="d-flex">
+                                @foreach (var wowClass in race.WowClasses)
+                                {
+                                    if (wowClass == null)
+                                    {
+                                        wowClass.Name = "None";
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-secondary">@wowClass.Name</span>
+                                    }
+                                }
+                            </div>
+                        </td>
+                        <td>
+                            <a asp-area="" asp-controller="AdminRace"
+                               asp-action="Edit"
+                               asp-route-id="@race.Id">Edit</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No Races Found</p>
+    }
+</div>
