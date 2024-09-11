@@ -8,19 +8,34 @@
     </div>
 </div>
 
-<div class="container py-5">
-    <form method="post">
-        <div class="mb-3">
-            <label class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" name="name" asp-for="Name"/>
-        </div>
-        <div class="mb-3">
-            <label class="form-label">Races</label>
-            <input type="text" class="form-control" id="races" name="races" asp-for="Races"/>
-        </div>
 
-        <div class="mb-3">
-            <button type="submit" class="btn btn-dark">Submit</button>
-        </div>
-    </form>
+<div class="container py-5">
+
+    @if (Model == null)
+    {
+        <p>Model is Null</p>
+    }
+    else if (Model != null)
+    {
+    <div class="container py-5">
+        <form method="post">
+            <div class="mb-3">
+                <label class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" asp-for="Name" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Races</label>
+                <select class="form-select" asp-items="@Model.AvailableRaces" asp-for="SelectedRaces">
+                </select>
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-dark">Submit</button>
+            </div>
+        </form>
+    </div>
+    }
+    else
+    {
+        <p>not found</p>
+    }
 </div>

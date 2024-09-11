@@ -9,27 +9,29 @@ namespace helpmepickmymain.Controllers
     public class AdminRaceController : Controller
     {
         private readonly IRaceRepository raceRepository;
+        private readonly IFactionRepository factionRepository;
 
-        public AdminRaceController(IRaceRepository raceRepository) //TO-DO: IMPLEMENT FACTION AND CLASS REPOS
+        public AdminRaceController(IRaceRepository raceRepository, IFactionRepository factionRepository) //TO-DO: IMPLEMENT FACTION AND CLASS REPOS
         {
             this.raceRepository = raceRepository;
+            this.factionRepository = factionRepository;
         }
 
         [HttpGet]
-        public IActionResult Add()
+        public async Task<IActionResult> Add()
         {
             //UNCOMMENT WHEN YOU IMPLEMENT THE CORRESPONDING CLASS
 
-            //var factions = await factionRepository.GetAllFactionsAsync();
+            var factions = await factionRepository.GetAllFactionsAsync();
             //var wowClasses = await wowClassesRepository.GetAllWowClassesAsync();
 
-            //var model = new AddRaceRequest
-            //{
-            //    AvailableFactions = factions.Select(x => new SelectListItem { Text = x.DisplayName, Value = x.Id.ToString() }),
-            //    AvailableWowClasses = wowClasses.Select(x => new SelectListItem { Text = x.DisplayName, Value = x.Id.ToString() })
-            //};
+            var model = new AddRaceRequest
+            {
+                AvailableFactions = factions.Select(x => new SelectListItem { Text = x.Name, Value = x.Id.ToString() }),
+                //AvailableWowClasses = wowClasses.Select(x => new SelectListItem { Text = x.DisplayName, Value = x.Id.ToString() })
+            };
             //TO DO ADD MODEL TO THE VIEW
-            return View();
+            return View(model);
         }
 
         [HttpPost]
@@ -55,15 +57,15 @@ namespace helpmepickmymain.Controllers
             //}
             //race.WowClasses = selectedWowClasses;
 
-            ////getting selectedFaction
-            //var selectedFactionId = Guid.Parse(addRaceRequest.SelectedFaction);
+            //getting selectedFaction
+            var selectedFactionId = Guid.Parse(addRaceRequest.SelectedFaction);
 
-            //var selectedFaction = await factionRepository.GetFactionAsync(selectedFactionId);
+            var selectedFaction = await factionRepository.GetFactionAsync(selectedFactionId);
 
-            //if (selectedFaction != null)
-            //{
-            //    race.Faction = selectedFaction;
-            //}
+            if (selectedFaction != null)
+            {
+                race.Faction = selectedFaction;
+            }
             //todo: Add in class!
 
             //mapping spec back to domain model
@@ -83,7 +85,8 @@ namespace helpmepickmymain.Controllers
         public async Task<IActionResult> Edit(Guid id)
         {
             var currentRace = await raceRepository.GetRaceAsync(id);
-            var raceDomainModel = await raceRepository.GetAllRacesAsync();
+            var factionDomainModel = await factionRepository.GetAllFactionsAsync();
+            //var wowClassDomainModel = await WowClassRepository.GetAllRacesAsync();
 
             if (currentRace != null)
             {
@@ -91,17 +94,17 @@ namespace helpmepickmymain.Controllers
                 {
                     Id = currentRace.Id,
                     Name = currentRace.Name,
-                    //Faction = currentRace.Faction,
-                    //AvailableFactions = raceDomainModel.Select(x => new SelectListItem
-                    //{
-                    //    Text = x.Name,
-                    //    value = x.id.tostring(),
-                    //    selected = (x.id == currentrace.faction.id)
-                    //}),
-                    //SelectedFaction = currentRace.Faction.Id.ToString()
+                    Faction = currentRace.Faction,
+                    AvailableFactions = factionDomainModel.Select(x => new SelectListItem
+                    {
+                        Text = x.Name,
+                        Value = x.Id.ToString(),
+                        Selected = (x.Id == currentRace.Faction.Id)
+                    }),
+                    SelectedFaction = currentRace.Faction.Id.ToString()
 
                     //WowClasses = currentSpec.WowClasses,
-                    //AvailableClasses = raceDomainModel.Select(x => new SelectListItem
+                    //AvailableClasses = wowClassDomainModel.Select(x => new SelectListItem
                     //{
                     //    Text = x.Name,
                     //    value = x.id.tostring(),
@@ -122,12 +125,12 @@ namespace helpmepickmymain.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit(EditRaceRequest editRaceRequest)
         {
-            //var selectedFaction = await factionRepository.GetRoleAsync(Guid.Parse(editRaceRequest.SelectedFaction));
+            var selectedFaction = await factionRepository.GetFactionAsync(Guid.Parse(editRaceRequest.SelectedFaction));
             var raceDomainModel = new Race
             {
                 Id = editRaceRequest.Id,
                 Name = editRaceRequest.Name,
-                //Faction = selectedFaction,
+                Faction = selectedFaction,
             };
 
             //var selectedWowClasses = new List<WowClass>();

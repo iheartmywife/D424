@@ -46,7 +46,7 @@ namespace helpmepickmymain.Repositories
         public async Task<Race?> GetRaceAsync(Guid id)
         {
             return await hmpmmDbContext.Races
-                //.Include(x => x.Faction)
+                .Include(x => x.Faction)
                 //.Include(x => x.WowClasses)
                 .FirstOrDefaultAsync(x => x.Id == id);
         }
@@ -54,7 +54,7 @@ namespace helpmepickmymain.Repositories
         public async Task<Race?> UpdateRaceAsync(Race race)
         {
             var existingRace = await hmpmmDbContext.Races
-                //.Include(x => x.Faction)
+                .Include(x => x.Faction)
                 //.Include(x => x.WowClasses)
                 .FirstOrDefaultAsync(x => x.Id == race.Id);
 

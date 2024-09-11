@@ -1,0 +1,44 @@
+﻿@model helpmepickmymain.Models.ViewModels.EditFactionRequest
+@{
+}
+
+<div class="bg-secondary bg-opacity-10 py-2">
+    <div class="container">
+        <h1>Edit Faction - Admin Functionality</h1>
+    </div>
+</div>
+<div class="container">
+    <h2>Note to Admin: To delete any Faction, you must assign all related races to a different faction</h2>
+</div>
+<div class="container py-5">
+    @if (Model == null)
+    {
+        <p>Model is Null</p>
+    }
+    else if (Model != null)
+    {
+    <form method="post">
+        <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" id="id" asp-for="Id" readonly/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" asp-for="Name" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Races</label>
+            <select class="form-select" size="8" asp-items="@Model.AvailableRaces" asp-for="SelectedRaces">
+            </select>
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-dark">Submit</button>
+            <button type="submit" class="btn btn-danger" asp-area="" asp-controller="AdminFaction" asp-action="Delete">Delete</button>
+        </div>
+        </form>
+    }
+    else
+    {
+        <p>Factions not found</p>
+    }
+</div>
