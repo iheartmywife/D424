@@ -1,0 +1,39 @@
+﻿@model helpmepickmymain.Models.ViewModels.User
+@{
+}
+
+
+<div class="jumbotron">
+    <div class="container text-center">
+        <h1>Select Faction!</h1>
+        <p>Select all Factions you are deciding between</p>
+    </div>
+</div>
+
+<form asp-action="AestheticsRaceSelect" method="post">
+    <div>
+        <label>Select Factions:</label>
+        <select asp-for="SelectedFactions" class="form-control" multiple="multiple">
+            @foreach (var faction in Model.PotentialFactionsList)
+            {
+                <option value="@faction.Value">@faction.Text</option>
+            }
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Next</button>
+</form>
+<br>
+
+@* <div class="container-fluid bg-3 text-center">
+    <div class="row">
+        @foreach (var potentialRace in Model.PotentialRaces)
+        {
+            <div class="col-sm-3">
+                <span class="badge bg-secondary">@potentialRace.Name</span>
+            </div>
+        }
+    </div>
+</div> *@
+<footer class="container-fluid text-center">
+    <p></p>
+</footer>

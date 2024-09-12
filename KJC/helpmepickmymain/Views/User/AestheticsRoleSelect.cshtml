@@ -1,0 +1,39 @@
+﻿@model helpmepickmymain.Models.ViewModels.User
+@{
+}
+
+
+<div class="jumbotron">
+    <div class="container text-center">
+        <h1>Select Role!</h1>
+        <p>Caught between two roles for your main? pick a flex option.</p>
+    </div>
+</div>
+
+<form asp-action="AestheticsWowClassSelect" method="post">
+    <div>
+        <label>Select Role:</label>
+        <select asp-for="SelectedRole" class="form-control">
+            @foreach (var role in Model.PotentialRolesList)
+            {
+                <option value="@role.Value">@role.Text</option>
+            }
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Next</button>
+</form>
+<br>
+
+@* <div class="container-fluid bg-3 text-center">
+    <div class="row">
+        @foreach (var potentialRace in Model.PotentialRaces)
+        {
+            <div class="col-sm-3">
+                <span class="badge bg-secondary">@potentialRace.Name</span>
+            </div>
+        }
+    </div>
+</div> *@
+<footer class="container-fluid text-center">
+    <p></p>
+</footer>

@@ -1,3 +1,12 @@
+C:\WGU\D424\KJC\helpmepickmymain\obj\Debug\net8.0\helpmepickmymain.csproj.AssemblyReference.cache
+C:\WGU\D424\KJC\helpmepickmymain\obj\Debug\net8.0\helpmepickmymain.GeneratedMSBuildEditorConfig.editorconfig
+C:\WGU\D424\KJC\helpmepickmymain\obj\Debug\net8.0\helpmepickmymain.AssemblyInfoInputs.cache
+C:\WGU\D424\KJC\helpmepickmymain\obj\Debug\net8.0\helpmepickmymain.AssemblyInfo.cs
+C:\WGU\D424\KJC\helpmepickmymain\obj\Debug\net8.0\helpmepickmymain.csproj.CoreCompileInputs.cache
+C:\WGU\D424\KJC\helpmepickmymain\obj\Debug\net8.0\helpmepickmymain.MvcApplicationPartsAssemblyInfo.cache
+C:\WGU\D424\KJC\helpmepickmymain\obj\Debug\net8.0\helpmepickmymain.RazorAssemblyInfo.cache
+C:\WGU\D424\KJC\helpmepickmymain\obj\Debug\net8.0\helpmepickmymain.RazorAssemblyInfo.cs
+C:\WGU\D424\KJC\helpmepickmymain\obj\Debug\net8.0\helpmepickmymain.sourcelink.json
 C:\WGU\D424\KJC\helpmepickmymain\bin\Debug\net8.0\appsettings.Development.json
 C:\WGU\D424\KJC\helpmepickmymain\bin\Debug\net8.0\appsettings.json
 C:\WGU\D424\KJC\helpmepickmymain\bin\Debug\net8.0\helpmepickmymain.staticwebassets.runtime.json
@@ -32,6 +41,7 @@ C:\WGU\D424\KJC\helpmepickmymain\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens
 C:\WGU\D424\KJC\helpmepickmymain\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
 C:\WGU\D424\KJC\helpmepickmymain\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 C:\WGU\D424\KJC\helpmepickmymain\bin\Debug\net8.0\Mono.TextTemplating.dll
+C:\WGU\D424\KJC\helpmepickmymain\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\WGU\D424\KJC\helpmepickmymain\bin\Debug\net8.0\System.CodeDom.dll
 C:\WGU\D424\KJC\helpmepickmymain\bin\Debug\net8.0\System.Composition.AttributedModel.dll
 C:\WGU\D424\KJC\helpmepickmymain\bin\Debug\net8.0\System.Composition.Convention.dll
@@ -110,15 +120,6 @@ C:\WGU\D424\KJC\helpmepickmymain\bin\Debug\net8.0\runtimes\win\lib\net6.0\System
 C:\WGU\D424\KJC\helpmepickmymain\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\WGU\D424\KJC\helpmepickmymain\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\WGU\D424\KJC\helpmepickmymain\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
-C:\WGU\D424\KJC\helpmepickmymain\obj\Debug\net8.0\helpmepickmymain.csproj.AssemblyReference.cache
-C:\WGU\D424\KJC\helpmepickmymain\obj\Debug\net8.0\helpmepickmymain.GeneratedMSBuildEditorConfig.editorconfig
-C:\WGU\D424\KJC\helpmepickmymain\obj\Debug\net8.0\helpmepickmymain.AssemblyInfoInputs.cache
-C:\WGU\D424\KJC\helpmepickmymain\obj\Debug\net8.0\helpmepickmymain.AssemblyInfo.cs
-C:\WGU\D424\KJC\helpmepickmymain\obj\Debug\net8.0\helpmepickmymain.csproj.CoreCompileInputs.cache
-C:\WGU\D424\KJC\helpmepickmymain\obj\Debug\net8.0\helpmepickmymain.MvcApplicationPartsAssemblyInfo.cache
-C:\WGU\D424\KJC\helpmepickmymain\obj\Debug\net8.0\helpmepickmymain.RazorAssemblyInfo.cache
-C:\WGU\D424\KJC\helpmepickmymain\obj\Debug\net8.0\helpmepickmymain.RazorAssemblyInfo.cs
-C:\WGU\D424\KJC\helpmepickmymain\obj\Debug\net8.0\helpmepickmymain.sourcelink.json
 C:\WGU\D424\KJC\helpmepickmymain\obj\Debug\net8.0\staticwebassets.build.json
 C:\WGU\D424\KJC\helpmepickmymain\obj\Debug\net8.0\staticwebassets.development.json
 C:\WGU\D424\KJC\helpmepickmymain\obj\Debug\net8.0\staticwebassets\msbuild.helpmepickmymain.Microsoft.AspNetCore.StaticWebAssets.props

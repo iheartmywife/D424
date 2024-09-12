@@ -1,8 +1,40 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Help Me Pick My Main";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container text-center py-5">
+    <h1>Welcome to helpmepickmymain!</h1>
+    <p>The web app dedicated to helping users pick their main for endgame content within a WoW season.</p>
+
+    <div id="start">
+        <button class="btn btn-primary btn-lg" id="start-btn">Help me pick my main</button>
+    </div>
+
+    <div id="aesthetic" class="d-none mt-4 mb-3">
+        <h4>Does the aesthetic of your character matter to you at all?</h4>
+        <button class="btn btn-success" id="aesthetic-yes">Yes</button>
+        <a type="submit" formmethod="get" class="btn btn-danger" id="aesthetic-no" asp-area="" asp-controller="User" asp-action="GameplayOnly">No</a>
+        <p>(selecting yes will enable faction and race decision help)</p>
+    </div>
+
+    <div id="aestheticPriority" class="d-none mt-4 mb-3">
+        <h4>Do you care more about the race and faction that your main is compared to the class that you play?</h4>
+        <a type="submit" formmethod="get" class="btn btn-success" id="aesthetic-yes" asp-area="" asp-controller="User" asp-action="AestheticsFactionSelect">Yes</a>
+        <a type="submit" formmethod="get" class="btn btn-danger" id="aesthetic-no" asp-area="" asp-controller="User" asp-action="Gameplay">No</a>
+        <p>(only select yes if BOTH are more important. select no if only one is more important)</p>
+    </div>
 </div>
+
+@section Scripts {
+    <script>
+        document.getElementById('start-btn').addEventListener('click', function () {
+            document.getElementById('start').classList.add('d-none');
+            document.getElementById('aesthetic').classList.remove('d-none');
+        });
+
+        document.getElementById('aesthetic-yes').addEventListener('click', function () {
+            document.getElementById('aesthetic').classList.add('d-none');
+            document.getElementById('aestheticPriority').classList.remove('d-none');
+        });
+    </script>
+}

@@ -13,6 +13,130 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\images\\ClassIcons\\icon-deathknight.png",
+      "PackagePath": "staticwebassets\\images\\ClassIcons\\icon-deathknight.png"
+    },
+    {
+      "Id": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\images\\ClassIcons\\icon-demonhunter.png",
+      "PackagePath": "staticwebassets\\images\\ClassIcons\\icon-demonhunter.png"
+    },
+    {
+      "Id": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\images\\ClassIcons\\icon-druid.png",
+      "PackagePath": "staticwebassets\\images\\ClassIcons\\icon-druid.png"
+    },
+    {
+      "Id": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\images\\ClassIcons\\icon-evoker.png",
+      "PackagePath": "staticwebassets\\images\\ClassIcons\\icon-evoker.png"
+    },
+    {
+      "Id": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\images\\ClassIcons\\icon-hunter.png",
+      "PackagePath": "staticwebassets\\images\\ClassIcons\\icon-hunter.png"
+    },
+    {
+      "Id": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\images\\ClassIcons\\icon-mage.png",
+      "PackagePath": "staticwebassets\\images\\ClassIcons\\icon-mage.png"
+    },
+    {
+      "Id": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\images\\ClassIcons\\icon-monk.png",
+      "PackagePath": "staticwebassets\\images\\ClassIcons\\icon-monk.png"
+    },
+    {
+      "Id": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\images\\ClassIcons\\icon-paladin.png",
+      "PackagePath": "staticwebassets\\images\\ClassIcons\\icon-paladin.png"
+    },
+    {
+      "Id": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\images\\ClassIcons\\icon-priest.png",
+      "PackagePath": "staticwebassets\\images\\ClassIcons\\icon-priest.png"
+    },
+    {
+      "Id": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\images\\ClassIcons\\icon-rogue.png",
+      "PackagePath": "staticwebassets\\images\\ClassIcons\\icon-rogue.png"
+    },
+    {
+      "Id": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\images\\ClassIcons\\icon-shaman.png",
+      "PackagePath": "staticwebassets\\images\\ClassIcons\\icon-shaman.png"
+    },
+    {
+      "Id": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\images\\ClassIcons\\icon-warlock.png",
+      "PackagePath": "staticwebassets\\images\\ClassIcons\\icon-warlock.png"
+    },
+    {
+      "Id": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\images\\ClassIcons\\icon-warrior.png",
+      "PackagePath": "staticwebassets\\images\\ClassIcons\\icon-warrior.png"
+    },
+    {
+      "Id": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\images\\FactionIcons\\Alliance.png",
+      "PackagePath": "staticwebassets\\images\\FactionIcons\\Alliance.png"
+    },
+    {
+      "Id": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\images\\FactionIcons\\Horde.png",
+      "PackagePath": "staticwebassets\\images\\FactionIcons\\Horde.png"
+    },
+    {
+      "Id": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\images\\RaceIcons\\Blood Elf.png",
+      "PackagePath": "staticwebassets\\images\\RaceIcons\\Blood Elf.png"
+    },
+    {
+      "Id": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\images\\RaceIcons\\Dracthyr-A.png",
+      "PackagePath": "staticwebassets\\images\\RaceIcons\\Dracthyr-A.png"
+    },
+    {
+      "Id": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\images\\RaceIcons\\Dracthyr-H.png",
+      "PackagePath": "staticwebassets\\images\\RaceIcons\\Dracthyr-H.png"
+    },
+    {
+      "Id": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\images\\RaceIcons\\Draenei.png",
+      "PackagePath": "staticwebassets\\images\\RaceIcons\\Draenei.png"
+    },
+    {
+      "Id": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\images\\RaceIcons\\Dwarf.png",
+      "PackagePath": "staticwebassets\\images\\RaceIcons\\Dwarf.png"
+    },
+    {
+      "Id": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\images\\RaceIcons\\Gnome.png",
+      "PackagePath": "staticwebassets\\images\\RaceIcons\\Gnome.png"
+    },
+    {
+      "Id": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\images\\RaceIcons\\Goblin.png",
+      "PackagePath": "staticwebassets\\images\\RaceIcons\\Goblin.png"
+    },
+    {
+      "Id": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\images\\RaceIcons\\Human.png",
+      "PackagePath": "staticwebassets\\images\\RaceIcons\\Human.png"
+    },
+    {
+      "Id": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\images\\RaceIcons\\Night Elf.png",
+      "PackagePath": "staticwebassets\\images\\RaceIcons\\Night Elf.png"
+    },
+    {
+      "Id": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\images\\RaceIcons\\Orc.png",
+      "PackagePath": "staticwebassets\\images\\RaceIcons\\Orc.png"
+    },
+    {
+      "Id": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\images\\RaceIcons\\Pandaren-A.png",
+      "PackagePath": "staticwebassets\\images\\RaceIcons\\Pandaren-A.png"
+    },
+    {
+      "Id": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\images\\RaceIcons\\Pandaren-H.png",
+      "PackagePath": "staticwebassets\\images\\RaceIcons\\Pandaren-H.png"
+    },
+    {
+      "Id": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\images\\RaceIcons\\Tauren.png",
+      "PackagePath": "staticwebassets\\images\\RaceIcons\\Tauren.png"
+    },
+    {
+      "Id": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\images\\RaceIcons\\Troll.png",
+      "PackagePath": "staticwebassets\\images\\RaceIcons\\Troll.png"
+    },
+    {
+      "Id": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\images\\RaceIcons\\Undead.png",
+      "PackagePath": "staticwebassets\\images\\RaceIcons\\Undead.png"
+    },
+    {
+      "Id": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\images\\RaceIcons\\Worgen.png",
+      "PackagePath": "staticwebassets\\images\\RaceIcons\\Worgen.png"
+    },
+    {
       "Id": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
