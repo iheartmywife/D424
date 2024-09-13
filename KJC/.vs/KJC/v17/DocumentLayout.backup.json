@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\WGU\\D424\\KJC\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|c:\\wgu\\d424\\kjc\\helpmepickmymain\\views\\user\\preferences.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|solutionrelative:helpmepickmymain\\views\\user\\preferences.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|c:\\wgu\\d424\\kjc\\helpmepickmymain\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|solutionrelative:helpmepickmymain\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|c:\\wgu\\d424\\kjc\\helpmepickmymain\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|solutionrelative:helpmepickmymain\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|c:\\wgu\\d424\\kjc\\helpmepickmymain\\ai\\openai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|solutionrelative:helpmepickmymain\\ai\\openai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|c:\\wgu\\d424\\kjc\\helpmepickmymain\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|solutionrelative:helpmepickmymain\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|c:\\wgu\\d424\\kjc\\helpmepickmymain\\controllers\\adminwowclasscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|solutionrelative:helpmepickmymain\\controllers\\adminwowclasscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|c:\\wgu\\d424\\kjc\\helpmepickmymain\\views\\adminwowclass\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|solutionrelative:helpmepickmymain\\views\\adminwowclass\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,54 +34,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AdminWowClassController.cs",
-              "DocumentMoniker": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\Controllers\\AdminWowClassController.cs",
-              "RelativeDocumentMoniker": "helpmepickmymain\\Controllers\\AdminWowClassController.cs",
-              "ToolTip": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\Controllers\\AdminWowClassController.cs",
-              "RelativeToolTip": "helpmepickmymain\\Controllers\\AdminWowClassController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-13T02:04:11.04Z",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\appsettings.json",
+              "RelativeDocumentMoniker": "helpmepickmymain\\appsettings.json",
+              "ToolTip": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\appsettings.json",
+              "RelativeToolTip": "helpmepickmymain\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-13T05:57:44.543Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Add.cshtml",
-              "DocumentMoniker": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\Views\\AdminWowClass\\Add.cshtml",
-              "RelativeDocumentMoniker": "helpmepickmymain\\Views\\AdminWowClass\\Add.cshtml",
-              "ToolTip": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\Views\\AdminWowClass\\Add.cshtml",
-              "RelativeToolTip": "helpmepickmymain\\Views\\AdminWowClass\\Add.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-13T02:03:36.108Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Preferences.cshtml",
-              "DocumentMoniker": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\Views\\User\\Preferences.cshtml",
-              "RelativeDocumentMoniker": "helpmepickmymain\\Views\\User\\Preferences.cshtml",
-              "ToolTip": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\Views\\User\\Preferences.cshtml",
-              "RelativeToolTip": "helpmepickmymain\\Views\\User\\Preferences.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-13T02:03:27.74Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "helpmepickmymain\\Controllers\\UserController.cs",
               "ToolTip": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\Controllers\\UserController.cs",
               "RelativeToolTip": "helpmepickmymain\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAAEBAAAAAAAAAADgv+4AAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAowBkAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-13T01:05:38.747Z",
+              "WhenOpened": "2024-09-13T05:35:29.003Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OpenAi.cs",
+              "DocumentMoniker": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\AI\\OpenAi.cs",
+              "RelativeDocumentMoniker": "helpmepickmymain\\AI\\OpenAi.cs",
+              "ToolTip": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\AI\\OpenAi.cs",
+              "RelativeToolTip": "helpmepickmymain\\AI\\OpenAi.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T05:31:14.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\Program.cs",
+              "RelativeDocumentMoniker": "helpmepickmymain\\Program.cs",
+              "ToolTip": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\Program.cs",
+              "RelativeToolTip": "helpmepickmymain\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T05:27:57.118Z",
               "EditorCaption": ""
             }
           ]

@@ -11,30 +11,30 @@
     </div>
 </div>
 
-<form method="post">
+<form asp-action="SubmitPreferences" method="post">
     <div class="mb-3">
         <label class="form-label">Utility</label>
-        <input type="textarea" class="form-control" id="utility" asp-for="UtilityPreference" />
+        <textarea class="form-control" id="utility" asp-for="UtilityPreference"></textarea>
     </div>
     <div class="mb-3">
         <label class="form-label">Durability</label>
-        <input type="textarea" class="form-control" id="durability" asp-for="DurabilityPreference" />
+        <textarea class="form-control" id="durability" asp-for="DurabilityPreference"></textarea>
     </div>
     <div class="mb-3">
         <label class="form-label">Rotation Style</label>
-        <input type="textarea" class="form-control" id="rotationStyle" asp-for="RotationStylePreference" />
+        <textarea class="form-control" id="rotationStyle" asp-for="RotationStylePreference"></textarea>
     </div>
     <div class="mb-3">
         <label class="form-label">Class Fantasy</label>
-        <input type="textarea" class="form-control" id="classFantasy" asp-for="ClassFantasyPreference" />
+        <textarea class="form-control" id="classFantasy" asp-for="ClassFantasyPreference"></textarea>
     </div>
     <div class="mb-3">
         <label class="form-label">Mobility</label>
-        <input type="textarea" class="form-control" id="mobility" asp-for="MobilityPreference" />
+        <textarea class="form-control" id="mobility" asp-for="MobilityPreference"></textarea>
     </div>
     <div class="mb-3">
         <label class="form-label">Strength in the Meta</label>
-        <input type="textarea" class="form-control" id="specStrength" asp-for="SpecStrengthPreference" />
+        <textarea class="form-control" id="specStrength" asp-for="SpecStrengthPreference"></textarea>
     </div>
     <div class="mb-3">
         <button type="submit" class="btn btn-dark">Submit</button>

@@ -1,4 +1,5 @@
 ﻿
+using helpmepickmymain.AI;
 using helpmepickmymain.Models.Domain;
 using helpmepickmymain.Models.ViewModels;
 using helpmepickmymain.Repositories;
@@ -15,14 +16,18 @@ namespace helpmepickmymain.Controllers
         private readonly IRoleRepository roleRepository;
         private readonly ISpecRepository specRepository;
         private readonly IWowClassRepository wowClassRepository;
+        private readonly OpenAi openAi;
 
-        public UserController(IFactionRepository factionRepository, IRaceRepository raceRepository, IRoleRepository roleRepository, ISpecRepository specRepository, IWowClassRepository wowClassRepository)
+        public UserController(IFactionRepository factionRepository, IRaceRepository raceRepository, IRoleRepository roleRepository, 
+            ISpecRepository specRepository, IWowClassRepository wowClassRepository, OpenAi openAi)
         {
+
             this.factionRepository = factionRepository;
             this.raceRepository = raceRepository;
             this.roleRepository = roleRepository;
             this.specRepository = specRepository;
             this.wowClassRepository = wowClassRepository;
+            this.openAi = openAi;
         }
 
         // USER ROUTE 1: AESTHETICS: FACTION->RACE->ROLE->CLASS
@@ -225,7 +230,7 @@ namespace helpmepickmymain.Controllers
         //}
 
         [HttpGet]
-        public async Task<IActionResult> Preferences()
+        public IActionResult Preferences()
         {
             var userDataJson = HttpContext.Session.GetString("RemainingSpecs");
             if (userDataJson == null)
@@ -234,23 +239,41 @@ namespace helpmepickmymain.Controllers
             }
             var remainingSpecs = JsonConvert.DeserializeObject<List<RemainingUserChoice>>(userDataJson);
 
-            string specQuery = "I am trying to decide on my main for the current World of Warcraft season. I have narrowed my options down to: ";
+            string specSelections = "";
             int specCount = remainingSpecs.Count();
             for (int i = 0; i < specCount - 1; i++)
             {
-                specQuery += $"{remainingSpecs[i].Name} {remainingSpecs[i].WowClassName}, ";
+                specSelections += $"{remainingSpecs[i].Name} {remainingSpecs[i].WowClassName}, ";
             }
-            specQuery += $"and {remainingSpecs[(specCount-1)].Name} {remainingSpecs[(specCount - 1)].WowClassName}.";
+            specSelections += $"and {remainingSpecs[(specCount-1)].Name} {remainingSpecs[(specCount - 1)].WowClassName}.";
 
             var userPreferences = new UserPreferences
             {
-                SelectedSpecs = specQuery,
+                SelectedSpecs = specSelections,
             };
 
             return View(userPreferences);
         }
 
+        [HttpPost]
+        public async Task<IActionResult> SubmitPreferences(UserPreferences userPreferences)
+        {
+            // Format the user’s preferences as a single string
+            var preferences = $"Utility: {userPreferences.UtilityPreference}, Durability: {userPreferences.DurabilityPreference}, " +
+                              $"Rotation: {userPreferences.RotationStylePreference}, Class Fantasy: {userPreferences.ClassFantasyPreference}, " +
+                              $"Mobility: {userPreferences.MobilityPreference}, Spec Strength: {userPreferences.SpecStrengthPreference}";
 
+            var specOptions = userPreferences.SelectedSpecs;
+
+            // Query OpenAI for the spec recommendation
+            var recommendation = await openAi.GetSpecRecommendationAsync(preferences, specOptions);
+
+            var model = new SpecRecommendation
+            {
+                Recommendation = recommendation,
+            };
+            return View(model);
+        }
 
 
 
