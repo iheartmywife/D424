@@ -1,0 +1,53 @@
+﻿@model List<helpmepickmymain.Models.ViewModels.RemainingUserChoice>
+@{
+}
+
+
+<div class="jumbotron">
+    <div class="container text-center">
+        <h1>Remaining Choices</h1>
+        <p>Based on your choices, your options have been narrowed down to: </p>
+    </div>
+</div>
+<table class="table">
+    <thead>
+        <tr class="border-1">
+            <th>Name</th>
+            <th>Class</th>
+            <th>Learn More</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var spec in Model)
+        {
+            <tr>
+                <td>@spec.Name</td>
+                <td>@spec.WowClassName</td>
+                <td><a href="@spec.WowheadLink">Read More</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div class="border-0">
+    <h4>If you have multiple choices remaining, or are not entirely sold on your remaining pick, we are happy to assist you further in your decision</h4>
+</div>
+
+<div id="start">
+    <a type="submit" formmethod="get" class="btn btn-danger" id="helpmepickmyclass" asp-area="" asp-controller="Home" asp-action="Index">I've got it from here</a>
+    <a type="submit" formmethod="get" class="btn btn-success" id="helpmepickmyclass" asp-area="" asp-controller="User" asp-action="Preferences">Help me decide between these options</a>
+</div>
+
+
+@* <div class="container-fluid bg-3 text-center">
+    <div class="row">
+        @foreach (var potentialRace in Model.PotentialRaces)
+        {
+            <div class="col-sm-3">
+                <span class="badge bg-secondary">@potentialRace.Name</span>
+            </div>
+        }
+    </div>
+</div> *@
+<footer class="container-fluid text-center">
+    <p></p>
+</footer>

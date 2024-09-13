@@ -102,6 +102,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxBZXN0aGV0aWNzUmFjZVNlbGVjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/WGU/D424/KJC/helpmepickmymain/Views/User/AestheticsRemainingChoices.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxBZXN0aGV0aWNzUmVtYWluaW5nQ2hvaWNlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/WGU/D424/KJC/helpmepickmymain/Views/User/AestheticsRoleSelect.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxBZXN0aGV0aWNzUm9sZVNlbGVjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -120,6 +124,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/WGU/D424/KJC/helpmepickmymain/Views/User/GameplayRoleSelect.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxHYW1lcGxheVJvbGVTZWxlY3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/WGU/D424/KJC/helpmepickmymain/Views/User/Preferences.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxQcmVmZXJlbmNlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/WGU/D424/KJC/helpmepickmymain/Views/_ViewImports.cshtml]

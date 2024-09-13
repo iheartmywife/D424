@@ -7,10 +7,18 @@
     <p>The web app dedicated to helping users pick their main for endgame content within a WoW season.</p>
 
     <div id="start">
-        <button class="btn btn-primary btn-lg" id="start-btn">Help me pick my main</button>
+        <a type="submit" formmethod="get" class="btn btn-danger" id="helpmepickmyclass" asp-area="" asp-controller="User" asp-action="AestheticsFactionSelect">Help me pick my main!</a>
     </div>
 
-    <div id="aesthetic" class="d-none mt-4 mb-3">
+    @* COMMENTS TO EVALUATOR: I PLAN ON EXPANDING FUNCTIONALITY AND DESIGN IN THE FUTURE. FOR NOW, I HAVE BUILT ONE LOGICAL PATH OF THE WEBSITE FOR EVALUATION.
+
+        In the future, the user will be able to start with their role or class, then pick race/faction, OR they can choose to forego race/faction all together if they
+        only care about their role/class.
+
+        Below is jscript and html for these other potential future decision paths.
+     *@
+
+@*     <div id="aesthetic" class="d-none mt-4 mb-3">
         <h4>Does the aesthetic of your character matter to you at all?</h4>
         <button class="btn btn-success" id="aesthetic-yes">Yes</button>
         <a type="submit" formmethod="get" class="btn btn-danger" id="aesthetic-no" asp-area="" asp-controller="User" asp-action="GameplayOnly">No</a>
@@ -37,4 +45,4 @@
             document.getElementById('aestheticPriority').classList.remove('d-none');
         });
     </script>
-}
+} *@

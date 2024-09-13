@@ -10,9 +10,9 @@
     </div>
 </div>
 
-<form asp-action="AestheticsWowSpecSelect" method="post">
+<form asp-action="AestheticsRemainingChoices" method="post">
     <div>
-        <label>Select Factions:</label>
+        <label>Select Specs:</label>
         <select asp-for="SelectedSpecs" class="form-control" multiple="multiple">
             @foreach (var spec in Model.PotentialSpecsList)
             {

@@ -3,48 +3,20 @@
   "WorkspaceRootPath": "C:\\WGU\\D424\\KJC\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|c:\\wgu\\d424\\kjc\\helpmepickmymain\\views\\user\\preferences.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|solutionrelative:helpmepickmymain\\views\\user\\preferences.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|c:\\wgu\\d424\\kjc\\helpmepickmymain\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|solutionrelative:helpmepickmymain\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|c:\\wgu\\d424\\kjc\\helpmepickmymain\\views\\user\\aestheticsroleselect.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|solutionrelative:helpmepickmymain\\views\\user\\aestheticsroleselect.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|c:\\wgu\\d424\\kjc\\helpmepickmymain\\controllers\\adminwowclasscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|solutionrelative:helpmepickmymain\\controllers\\adminwowclasscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|c:\\wgu\\d424\\kjc\\helpmepickmymain\\views\\user\\aestheticsspecselect.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|solutionrelative:helpmepickmymain\\views\\user\\aestheticsspecselect.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|c:\\wgu\\d424\\kjc\\helpmepickmymain\\views\\user\\aestheticswowclassselect.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|solutionrelative:helpmepickmymain\\views\\user\\aestheticswowclassselect.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|c:\\wgu\\d424\\kjc\\helpmepickmymain\\models\\viewmodels\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|solutionrelative:helpmepickmymain\\models\\viewmodels\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|c:\\wgu\\d424\\kjc\\helpmepickmymain\\views\\user\\gameplayroleselect.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|solutionrelative:helpmepickmymain\\views\\user\\gameplayroleselect.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|c:\\wgu\\d424\\kjc\\helpmepickmymain\\views\\user\\aestheticsraceselect.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|solutionrelative:helpmepickmymain\\views\\user\\aestheticsraceselect.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|c:\\wgu\\d424\\kjc\\helpmepickmymain\\views\\user\\aestheticsfactionselect.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|solutionrelative:helpmepickmymain\\views\\user\\aestheticsfactionselect.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|c:\\wgu\\d424\\kjc\\helpmepickmymain\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|solutionrelative:helpmepickmymain\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|c:\\wgu\\d424\\kjc\\helpmepickmymain\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|solutionrelative:helpmepickmymain\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|c:\\wgu\\d424\\kjc\\helpmepickmymain\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|solutionrelative:helpmepickmymain\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|c:\\wgu\\d424\\kjc\\helpmepickmymain\\views\\adminwowclass\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6554B79F-3F94-4842-9064-17CCC6CC7A0C}|helpmepickmymain\\helpmepickmymain.csproj|solutionrelative:helpmepickmymain\\views\\adminwowclass\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,145 +34,54 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdminWowClassController.cs",
+              "DocumentMoniker": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\Controllers\\AdminWowClassController.cs",
+              "RelativeDocumentMoniker": "helpmepickmymain\\Controllers\\AdminWowClassController.cs",
+              "ToolTip": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\Controllers\\AdminWowClassController.cs",
+              "RelativeToolTip": "helpmepickmymain\\Controllers\\AdminWowClassController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-13T02:04:11.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "AestheticsWowClassSelect.cshtml",
-              "DocumentMoniker": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\Views\\User\\AestheticsWowClassSelect.cshtml",
-              "RelativeDocumentMoniker": "helpmepickmymain\\Views\\User\\AestheticsWowClassSelect.cshtml",
-              "ToolTip": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\Views\\User\\AestheticsWowClassSelect.cshtml",
-              "RelativeToolTip": "helpmepickmymain\\Views\\User\\AestheticsWowClassSelect.cshtml",
+              "Title": "Add.cshtml",
+              "DocumentMoniker": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\Views\\AdminWowClass\\Add.cshtml",
+              "RelativeDocumentMoniker": "helpmepickmymain\\Views\\AdminWowClass\\Add.cshtml",
+              "ToolTip": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\Views\\AdminWowClass\\Add.cshtml",
+              "RelativeToolTip": "helpmepickmymain\\Views\\AdminWowClass\\Add.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-12T13:13:57.442Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AestheticsRoleSelect.cshtml",
-              "DocumentMoniker": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\Views\\User\\AestheticsRoleSelect.cshtml",
-              "RelativeDocumentMoniker": "helpmepickmymain\\Views\\User\\AestheticsRoleSelect.cshtml",
-              "ToolTip": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\Views\\User\\AestheticsRoleSelect.cshtml",
-              "RelativeToolTip": "helpmepickmymain\\Views\\User\\AestheticsRoleSelect.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-12T12:23:46.04Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "helpmepickmymain\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "helpmepickmymain\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-12T12:23:25.951Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GameplayRoleSelect.cshtml",
-              "DocumentMoniker": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\Views\\User\\GameplayRoleSelect.cshtml",
-              "RelativeDocumentMoniker": "helpmepickmymain\\Views\\User\\GameplayRoleSelect.cshtml",
-              "ToolTip": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\Views\\User\\GameplayRoleSelect.cshtml",
-              "RelativeToolTip": "helpmepickmymain\\Views\\User\\GameplayRoleSelect.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-12T12:22:25.036Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AestheticsRaceSelect.cshtml",
-              "DocumentMoniker": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\Views\\User\\AestheticsRaceSelect.cshtml",
-              "RelativeDocumentMoniker": "helpmepickmymain\\Views\\User\\AestheticsRaceSelect.cshtml",
-              "ToolTip": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\Views\\User\\AestheticsRaceSelect.cshtml",
-              "RelativeToolTip": "helpmepickmymain\\Views\\User\\AestheticsRaceSelect.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-12T11:42:44.057Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "helpmepickmymain\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "helpmepickmymain\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-12T11:34:51.798Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\Models\\ViewModels\\User.cs",
-              "RelativeDocumentMoniker": "helpmepickmymain\\Models\\ViewModels\\User.cs",
-              "ToolTip": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\Models\\ViewModels\\User.cs",
-              "RelativeToolTip": "helpmepickmymain\\Models\\ViewModels\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-12T11:24:31.948Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\Program.cs",
-              "RelativeDocumentMoniker": "helpmepickmymain\\Program.cs",
-              "ToolTip": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\Program.cs",
-              "RelativeToolTip": "helpmepickmymain\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-12T11:21:41.949Z",
+              "WhenOpened": "2024-09-13T02:03:36.108Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Preferences.cshtml",
+              "DocumentMoniker": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\Views\\User\\Preferences.cshtml",
+              "RelativeDocumentMoniker": "helpmepickmymain\\Views\\User\\Preferences.cshtml",
+              "ToolTip": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\Views\\User\\Preferences.cshtml",
+              "RelativeToolTip": "helpmepickmymain\\Views\\User\\Preferences.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-13T02:03:27.74Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "helpmepickmymain\\Controllers\\UserController.cs",
               "ToolTip": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\Controllers\\UserController.cs",
               "RelativeToolTip": "helpmepickmymain\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAkwFoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAEBAAAAAAAAAADgv+4AAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-12T11:14:50.414Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AestheticsSpecSelect.cshtml",
-              "DocumentMoniker": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\Views\\User\\AestheticsSpecSelect.cshtml",
-              "RelativeDocumentMoniker": "helpmepickmymain\\Views\\User\\AestheticsSpecSelect.cshtml",
-              "ToolTip": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\Views\\User\\AestheticsSpecSelect.cshtml",
-              "RelativeToolTip": "helpmepickmymain\\Views\\User\\AestheticsSpecSelect.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-12T13:50:06.684Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AestheticsFactionSelect.cshtml",
-              "DocumentMoniker": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\Views\\User\\AestheticsFactionSelect.cshtml",
-              "RelativeDocumentMoniker": "helpmepickmymain\\Views\\User\\AestheticsFactionSelect.cshtml",
-              "ToolTip": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\Views\\User\\AestheticsFactionSelect.cshtml",
-              "RelativeToolTip": "helpmepickmymain\\Views\\User\\AestheticsFactionSelect.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-12T11:14:55.587Z",
+              "WhenOpened": "2024-09-13T01:05:38.747Z",
               "EditorCaption": ""
             }
           ]

@@ -5,21 +5,27 @@
 
 <div class="jumbotron">
     <div class="container text-center">
-        <h1>Select Faction!</h1>
-        <p>Select all Factions you are deciding between</p>
+        <h1>Select Classes!</h1>
+        <p>Select all Classes you are deciding between</p>
+        <p>results filtered based on selected faction, race, and role</p>
     </div>
 </div>
 
-<form asp-action="AestheticsWowSpecSelect" method="post">
+<form asp-action="AestheticsSpecSelect" method="post">
+
+    @* passing selected role through form *@
+    <input type="hidden" asp-for="SelectedRole" />
+
     <div>
-        <label>Select Factions:</label>
-        <select asp-for="SelectedFactions" class="form-control" multiple="multiple">
-            @foreach (var role in Model.PotentialRolesList)
+        <label>Select Classes:</label>
+        <select asp-for="SelectedWowClasses" class="form-control" multiple="multiple">
+            @foreach (var wowClass in Model.PotentialWowClassesList)
             {
-                <option value="@role.Value">@role.Text</option>
+                <option value="@wowClass.Value">@wowClass.Text</option>
             }
         </select>
     </div>
+
     <button type="submit" class="btn btn-primary">Next</button>
 </form>
 <br>

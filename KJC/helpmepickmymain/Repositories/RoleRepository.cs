@@ -40,6 +40,7 @@ namespace helpmepickmymain.Repositories
 
         public async Task<Role?> GetRoleAsync(Guid id)
         {
+            var debugRole = await hmpmmDbContext.Roles.FirstOrDefaultAsync(x => x.Id == id);
             return await hmpmmDbContext.Roles.FirstOrDefaultAsync(x => x.Id == id);
         }
 

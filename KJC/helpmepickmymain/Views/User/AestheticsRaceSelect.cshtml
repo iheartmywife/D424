@@ -5,15 +5,15 @@
 
 <div class="jumbotron">
     <div class="container text-center">
-        <h1>Select Faction!</h1>
-        <p>Select all Factions you are deciding between</p>
+        <h1>Select Races!</h1>
+        <p>Select all Races you are deciding between</p>
     </div>
 </div>
 
 <form asp-action="AestheticsRoleSelect" method="post">
     <div>
-        <label>Select Factions:</label>
-        <select asp-for="SelectedFactions" class="form-control" multiple="multiple">
+        <label>Select Race:</label>
+        <select asp-for="SelectedRaces" class="form-control" multiple="multiple">
             @foreach (var race in Model.PotentialRacesList)
             {
                 <option value="@race.Value">@race.Text</option>

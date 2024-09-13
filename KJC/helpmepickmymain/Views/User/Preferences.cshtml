@@ -1,0 +1,46 @@
+﻿@model helpmepickmymain.Models.ViewModels.UserPreferences
+@{
+}
+
+
+<div class="jumbotron">
+    <div class="container text-center">
+        <h1>Playstyle Preferences</h1>
+        <p>Describe your preference for each item in the textareas below.</p>
+        <p>If you have no preference, leave it blank.</p>
+    </div>
+</div>
+
+<form method="post">
+    <div class="mb-3">
+        <label class="form-label">Utility</label>
+        <input type="textarea" class="form-control" id="utility" asp-for="UtilityPreference" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Durability</label>
+        <input type="textarea" class="form-control" id="durability" asp-for="DurabilityPreference" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Rotation Style</label>
+        <input type="textarea" class="form-control" id="rotationStyle" asp-for="RotationStylePreference" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Class Fantasy</label>
+        <input type="textarea" class="form-control" id="classFantasy" asp-for="ClassFantasyPreference" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Mobility</label>
+        <input type="textarea" class="form-control" id="mobility" asp-for="MobilityPreference" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Strength in the Meta</label>
+        <input type="textarea" class="form-control" id="specStrength" asp-for="SpecStrengthPreference" />
+    </div>
+    <div class="mb-3">
+        <button type="submit" class="btn btn-dark">Submit</button>
+    </div>
+</form>
+
+<footer class="container-fluid text-center">
+    <p></p>
+</footer>
