@@ -27,8 +27,10 @@ namespace helpmepickmymain.AI
         {
             var chatRequest = new CompletionRequest
             {
-                Prompt = $"You are an expert in World of Warcraft specs. These are my options: {specOptions}. What spec should I play based on these preferences: {preferences}?",
-                Model = "gpt-3.5-turbo",
+                Prompt = $"You are an expert in World of Warcraft specs. These are my options: {specOptions}. You must pick between one of those specs. " +
+                $"Out of those specs, what should I play based on these preferences: {preferences}?",
+
+                Model = "gpt-3.5-turbo-instruct",
                 MaxTokens = 150,
             };
 

@@ -27,8 +27,8 @@
                     <input type="text" class="form-control" id="name" asp-for="Name" />
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Class</label>
-                    <select class="form-select" asp-items="@Model.AvailableWowClasses" asp-for="SelectedWowClass">
+                    <label class="form-label">Class (currently unavailable to edit)</label>
+                    <select class="form-select" asp-items="@Model.AvailableWowClasses" asp-for="SelectedWowClass" readonly>
                     </select>
                 </div>
                 <div class="mb-3">

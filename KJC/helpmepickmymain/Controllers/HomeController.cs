@@ -1,5 +1,6 @@
 using helpmepickmymain.Models;
 using helpmepickmymain.Repositories;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -16,6 +17,7 @@ namespace helpmepickmymain.Controllers
 
         public IActionResult Index()
         {
+            _logger.LogInformation("HomeController Index method called.");
             return View();
         }
 
@@ -25,9 +27,16 @@ namespace helpmepickmymain.Controllers
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        public IActionResult Error(string errorMessage)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            var exception = HttpContext.Features.Get<IExceptionHandlerFeature>();
+
+            return View(new ErrorViewModel 
+            {
+                RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier, 
+                ExceptionMessage = exception?.Error.Message, 
+                ErrorMessage = errorMessage 
+            });
         }
     }
 }

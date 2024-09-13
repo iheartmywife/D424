@@ -82,9 +82,11 @@ namespace helpmepickmymain.Controllers
             var roleDomainModel = await roleRepository.GetAllRolesAsync();
             var wowClassDomainModel = await wowClassRepository.GetAllWowClassesAsync();
 
-            if (currentSpec != null)
+            try
             {
-                var model = new EditSpecRequest
+                if (currentSpec != null)
+                {
+                    var model = new EditSpecRequest
                 {
                     Id = currentSpec.Id,
                     Name = currentSpec.Name,
@@ -108,14 +110,21 @@ namespace helpmepickmymain.Controllers
                     SelectedWowClass = currentSpec.WowClass.Id.ToString(),
                 };
 
-                return View(model);
+                    return View(model);
+                }
+                else if (currentSpec == null)
+                {
+                    Console.WriteLine($"Spec with id {id} not found");
+                    return NotFound();
+                }
+                return View(null);
             }
-            else if (currentSpec == null)
+            catch (Exception e)
             {
-                Console.WriteLine($"Spec with id {id} not found");
-                return NotFound();
+                string errormessage = "You cannot reassign a spec to a different class. You must delete the spec and remake it";
+                return RedirectToAction("Error", "Home", new { ErrorMessage = errormessage });
             }
-            return View(null);
+
         }
 
         [HttpPost]

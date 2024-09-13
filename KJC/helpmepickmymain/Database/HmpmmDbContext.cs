@@ -5,7 +5,7 @@ namespace helpmepickmymain.Database
 {
     public class HmpmmDbContext : DbContext
     {
-        public HmpmmDbContext(DbContextOptions options) : base(options)
+        public HmpmmDbContext(DbContextOptions<HmpmmDbContext> options) : base(options)
         {
         }
 

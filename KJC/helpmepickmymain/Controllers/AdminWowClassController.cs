@@ -216,17 +216,26 @@ namespace helpmepickmymain.Controllers
         [HttpPost]
         public async Task<IActionResult> Delete(EditWowClassRequest editWowClassRequest)
         {
-            //talk to repo and delete this race
-            var deletedWowClass = await wowClassRepository.DeleteWowClassAsync(editWowClassRequest.Id);
-
-            if (deletedWowClass != null)
+            try
             {
-                //show success notification
-                return RedirectToAction("List");
+
+                //talk to repo and delete this race
+                var deletedWowClass = await wowClassRepository.DeleteWowClassAsync(editWowClassRequest.Id);
+
+                if (deletedWowClass != null)
+                {
+                    //show success notification
+                    return RedirectToAction("List");
+                }
+                //show error notification
+                return RedirectToAction("Edit", new { id = editWowClassRequest.Id });
+                //display response
             }
-            //show error notification
-            return RedirectToAction("Edit", new { id = editWowClassRequest.Id });
-            //display response
+            catch (Exception e)
+            {
+                string errormessage = "You cannot delete a class that has a spec, faction, or race assigned to it. Delete the spec and remove the assigned faction and races first";
+                return RedirectToAction("Error", "Home", new { ErrorMessage = errormessage});
+            }
         }
     }
 }

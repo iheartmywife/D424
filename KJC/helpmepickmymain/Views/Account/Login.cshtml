@@ -1,0 +1,26 @@
+﻿@model helpmepickmymain.Models.ViewModels.AdminLogin
+@{
+}
+
+<div class="bg-secondary bg-opacity-10 py-2">
+    <div class="container justify-content-center">
+        <h1>Admin Login</h1>
+    </div>
+</div>
+<div class="container py-5 justify-content-center">
+    <form method="post">
+        <div class="mb-3">
+            <label class="form-label">Username</label>
+            <input type="text" class="form-control" id="Username" asp-for="Username" />
+            <span class="text-danger" asp-validation-for="Username"></span>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control" id="Password" asp-for="Password" />
+            <span class="text-danger" asp-validation-for="Password"></span>
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-dark">Submit</button>
+        </div>
+    </form>
+</div>

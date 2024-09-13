@@ -5,6 +5,7 @@ using helpmepickmymain.Models.ViewModels;
 using helpmepickmymain.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
 
 namespace helpmepickmymain.Controllers
@@ -48,6 +49,7 @@ namespace helpmepickmymain.Controllers
         [HttpPost]
         public async Task<IActionResult> AestheticsRaceSelect(User user)
         {
+
             var userDataJson = HttpContext.Session.GetString("UserData");
             if (userDataJson == null || user.SelectedFactions == null)
             {
@@ -86,6 +88,7 @@ namespace helpmepickmymain.Controllers
         [HttpPost]
         public async Task<IActionResult> AestheticsRoleSelect(User user)
         {
+
             var userDataJson = HttpContext.Session.GetString("UserData");
             if (userDataJson == null || user.SelectedRaces == null)
             {
@@ -135,6 +138,7 @@ namespace helpmepickmymain.Controllers
         [HttpPost]
         public async Task<IActionResult> AestheticsWowClassSelect(User user)
         {
+
             var userDataJson = HttpContext.Session.GetString("UserData");
             if (userDataJson == null || user.SelectedRole == null)
             {
@@ -164,6 +168,7 @@ namespace helpmepickmymain.Controllers
         [HttpPost]
         public async Task<IActionResult> AestheticsSpecSelect(User user)
         {
+
             var userDataJson = HttpContext.Session.GetString("UserData");
             if (userDataJson == null || user.SelectedWowClasses == null)
             {
@@ -192,6 +197,7 @@ namespace helpmepickmymain.Controllers
         [HttpPost] 
         public async Task<IActionResult> AestheticsRemainingChoices(User user)
         {
+
             var userDataJson = HttpContext.Session.GetString("UserData");
             if (userDataJson == null || user.SelectedSpecs == null)
             {
@@ -232,6 +238,7 @@ namespace helpmepickmymain.Controllers
         [HttpGet]
         public IActionResult Preferences()
         {
+
             var userDataJson = HttpContext.Session.GetString("RemainingSpecs");
             if (userDataJson == null)
             {
@@ -258,14 +265,15 @@ namespace helpmepickmymain.Controllers
         [HttpPost]
         public async Task<IActionResult> SubmitPreferences(UserPreferences userPreferences)
         {
-            // Format the user’s preferences as a single string
+
+
             var preferences = $"Utility: {userPreferences.UtilityPreference}, Durability: {userPreferences.DurabilityPreference}, " +
                               $"Rotation: {userPreferences.RotationStylePreference}, Class Fantasy: {userPreferences.ClassFantasyPreference}, " +
                               $"Mobility: {userPreferences.MobilityPreference}, Spec Strength: {userPreferences.SpecStrengthPreference}";
 
             var specOptions = userPreferences.SelectedSpecs;
 
-            // Query OpenAI for the spec recommendation
+
             var recommendation = await openAi.GetSpecRecommendationAsync(preferences, specOptions);
 
             var model = new SpecRecommendation

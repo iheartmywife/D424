@@ -2,6 +2,7 @@
 using helpmepickmymain.Models.Domain;
 using helpmepickmymain.Models.ViewModels;
 using helpmepickmymain.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
@@ -18,6 +19,7 @@ namespace helpmepickmymain.Controllers
             this.factionRepository = factionRepository;
         }
 
+        [Authorize]
         [HttpGet]
         public async Task<IActionResult> Add()
         {

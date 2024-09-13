@@ -1,8 +1,10 @@
 using helpmepickmymain.AI;
 using helpmepickmymain.Database;
 using helpmepickmymain.Repositories;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using OpenAI_API;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +12,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<HmpmmDbContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("HelpMePickMyMainDbConnectionString")));
+
+builder.Services.AddDbContext<AuthDbContext>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("HelpMePickMyMainAuthDbConnectionString")));
+
+builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+    .AddEntityFrameworkStores<AuthDbContext>();
 
 builder.Services.AddScoped<IRoleRepository, RoleRepository>();
 builder.Services.AddScoped<ISpecRepository, SpecRepository>();
@@ -35,6 +43,13 @@ builder.Services.AddScoped<OpenAi>(sp =>
     var openAiApi = sp.GetRequiredService<OpenAIAPI>();
     return new OpenAi(openAiApi);
 });
+Log.Logger = new LoggerConfiguration()
+    .ReadFrom.Configuration(builder.Configuration)
+    .WriteTo.Console()
+    .WriteTo.File("logs/log.txt", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
+
+builder.Host.UseSerilog();
 
 //builder.Services.AddHttpClient<OpenAi>(client =>
 //{
@@ -73,6 +88,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 app.UseSession();
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

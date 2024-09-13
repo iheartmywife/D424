@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\WGU\D424\KJC\helpmepickmymain
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/WGU/D424/KJC/helpmepickmymain/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/WGU/D424/KJC/helpmepickmymain/Views/AdminFaction/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5GYWN0aW9uXEFkZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -122,20 +126,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxBZXN0aGV0aWNzV293Q2xhc3NTZWxlY3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/WGU/D424/KJC/helpmepickmymain/Views/User/GameplayOnly.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxHYW1lcGxheU9ubHkuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/WGU/D424/KJC/helpmepickmymain/Views/User/GameplayRoleSelect.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxHYW1lcGxheVJvbGVTZWxlY3QuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/WGU/D424/KJC/helpmepickmymain/Views/User/Preferences.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxQcmVmZXJlbmNlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/WGU/D424/KJC/helpmepickmymain/Views/User/SpecRecommendation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxTcGVjUmVjb21tZW5kYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/WGU/D424/KJC/helpmepickmymain/Views/User/SubmitPreferences.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxTdWJtaXRQcmVmZXJlbmNlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/WGU/D424/KJC/helpmepickmymain/Views/_ViewImports.cshtml]
