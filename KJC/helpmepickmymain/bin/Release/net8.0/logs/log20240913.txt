@@ -1,0 +1,1 @@
+2024-09-13 19:14:43.643 -07:00 [WRN] The WebRootPath was not found: C:\WGU\D424\KJC\helpmepickmymain\bin\Release\net8.0\wwwroot. Static files may be unavailable.
