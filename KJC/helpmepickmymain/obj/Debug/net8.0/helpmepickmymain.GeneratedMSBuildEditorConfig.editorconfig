@@ -134,6 +134,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxTcGVjUmVjb21tZW5kYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/WGU/D424/KJC/helpmepickmymain/Views/User/SpecSearch.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxTcGVjU2VhcmNoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/WGU/D424/KJC/helpmepickmymain/Views/User/SpecSearchResult.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxTcGVjU2VhcmNoUmVzdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/WGU/D424/KJC/helpmepickmymain/Views/User/SubmitPreferences.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxTdWJtaXRQcmVmZXJlbmNlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

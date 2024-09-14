@@ -6,6 +6,8 @@ namespace helpmepickmymain.Repositories
     {
         Task<IEnumerable<Spec>> GetAllSpecsAsync();
 
+        Task<IEnumerable<Spec>> GetAllSpecsWithNameAsync(string Name);
+
         Task<Spec?> GetSpecAsync(Guid id);
 
         Task<Spec> AddSpecAsync(Spec spec);

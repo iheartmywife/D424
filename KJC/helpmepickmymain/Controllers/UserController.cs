@@ -31,6 +31,23 @@ namespace helpmepickmymain.Controllers
             this.openAi = openAi;
         }
 
+        [HttpGet]
+        public async Task<IActionResult> SpecSearch()
+        {
+            var model = new SpecSearch();
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> SpecSearchResult(SpecSearch specSearch)
+        {
+            var name = specSearch.search;
+            var model = await specRepository.GetAllSpecsWithNameAsync(name);
+
+            return View(model);
+        }
+
         // USER ROUTE 1: AESTHETICS: FACTION->RACE->ROLE->CLASS
         [HttpGet]
         public async Task<IActionResult> AestheticsFactionSelect()

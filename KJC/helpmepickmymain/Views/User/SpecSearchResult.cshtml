@@ -1,0 +1,44 @@
+﻿@model List<helpmepickmymain.Models.Domain.Spec>
+@{
+}
+
+<div class="bg-secondary bg-opacity-10 py-2">
+    <div class="container">
+        <h1>All Specs that Match Your Search:</h1>
+    </div>
+</div>
+
+<div class="container py-5">
+    @if (Model == null)
+    {
+        <p>The Model is Null</p>
+    }
+    else if (Model.Any())
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Role</th>
+                    <th>Class</th>
+                    <th>WoWHead Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var spec in Model)
+                {
+                    <tr>
+                        <td>@spec.Name</td>
+                        <td>@spec.Role.DisplayName</td>
+                        <td>@(spec.WowClass != null ? spec.WowClass.Name : "None")</td>
+                        <td><a href="@(spec.WowheadLink)">Learn More</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No Specs Found</p>
+    }
+</div>

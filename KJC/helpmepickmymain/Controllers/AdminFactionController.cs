@@ -139,17 +139,25 @@ namespace helpmepickmymain.Controllers
         [HttpPost]
         public async Task<IActionResult> Delete(EditFactionRequest editFactionRequest)
         {
-            //talk to repo and delete this race
-            var deletedFaction = await factionRepository.DeleteFactionAsync(editFactionRequest.Id);
-
-            if (deletedFaction != null)
+            try
             {
-                //show success notification
-                return RedirectToAction("List");
+
+                var deletedFaction = await factionRepository.DeleteFactionAsync(editFactionRequest.Id);
+
+                if (deletedFaction != null)
+                {
+                    //show success notification
+                    return RedirectToAction("List");
+                }
+                //show error notification
+                return RedirectToAction("Edit", new { id = editFactionRequest.Id });
+                //display response
             }
-            //show error notification
-            return RedirectToAction("Edit", new { id = editFactionRequest.Id });
-            //display response
+            catch (Exception e)
+            {
+                string errormessage = "You cannot delete a faction that has a race assigned to it. Delete the race or remove the assigned race first";
+                return RedirectToAction("Error", "Home", new { ErrorMessage = errormessage });
+            }
         }
     }
 }

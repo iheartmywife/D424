@@ -1,0 +1,21 @@
+﻿@model helpmepickmymain.Models.ViewModels.SpecSearch
+@{
+}
+
+<div class="jumbotron">
+    <div class="container-fluid text-center">
+        <h1>Spec Search</h1>
+        <p>Enter the name of any spec (without the class name)</p>
+    </div>
+</div>
+<p></p>
+<form method="post" class="container-fluid text-center" asp-action="SpecSearchResult" asp-controller="User">
+    <input type="text" id="name" asp-for="search" />
+    <button type="submit">Search</button>
+</form>
+
+<footer class="container-fluid text-center">
+    <p></p>
+</footer>
+
+

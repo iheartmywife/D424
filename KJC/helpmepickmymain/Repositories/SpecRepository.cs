@@ -40,6 +40,14 @@ namespace helpmepickmymain.Repositories
                 .Include(x => x.WowClass)
                 .ToListAsync();
         }
+        public async Task<IEnumerable<Spec>> GetAllSpecsWithNameAsync(string Name)
+        {
+            return await hmpmmDbContext.Specs
+                .Where(x => x.Name.Contains(Name))
+                .Include(x => x.Role)
+                .Include(x => x.WowClass)
+                .ToListAsync();
+        }
 
         public async Task<Spec?> GetSpecAsync(Guid id)
         {
@@ -69,5 +77,6 @@ namespace helpmepickmymain.Repositories
             }
             return null;
         }
+
     }
 }
