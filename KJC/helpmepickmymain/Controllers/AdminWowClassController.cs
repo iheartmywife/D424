@@ -233,7 +233,7 @@ namespace helpmepickmymain.Controllers
             }
             catch (Exception e)
             {
-                string errormessage = "You cannot delete a class that has a spec, faction, or race assigned to it. Delete the spec and remove the assigned faction and races first";
+                string errormessage = "You cannot delete a class that has a spec assigned to it. Delete the spec and remove the assigned faction and races first";
                 return RedirectToAction("Error", "Home", new { ErrorMessage = errormessage});
             }
         }

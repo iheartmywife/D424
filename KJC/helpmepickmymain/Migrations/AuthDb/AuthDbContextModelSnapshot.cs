@@ -152,15 +152,15 @@ namespace helpmepickmymain.Migrations.AuthDb
                         {
                             Id = "0020b04d-9e61-498f-8f2e-33721079ae4d",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "e42aac2b-cfc5-43ef-92d3-4ab6326088ed",
+                            ConcurrencyStamp = "5d6decbb-38f0-47ec-abb4-4e81963f453e",
                             Email = "kcherma@wgu.edu",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "KCHERMA@WGU.EDU",
                             NormalizedUserName = "HELPMEPICKMYMAIN",
-                            PasswordHash = "AQAAAAIAAYagAAAAEE9gE+WmD9fQFm+2Xh/lCubvdtR9b3QXy8dXLPQSBFhtjl614rd4RaHbyj6siV2fSA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEGVcV+ma2ksWMoXAWC/+4VF31AUGKdRykg4L40TLsnXJEq6YrWMkFslnQsH7mH9/yA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "8f28b8d1-f0e1-4276-a659-54f469831153",
+                            SecurityStamp = "a77e1793-fdae-4219-96ff-5fa5c4117ed1",
                             TwoFactorEnabled = false,
                             UserName = "helpmepickmymain"
                         });

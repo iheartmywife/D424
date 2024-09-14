@@ -73,6 +73,10 @@
       "PackagePath": "staticwebassets\\images\\FactionIcons\\Horde.png"
     },
     {
+      "Id": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\images\\RaceIcons\\AWSCLIV2.msi",
+      "PackagePath": "staticwebassets\\images\\RaceIcons\\AWSCLIV2.msi"
+    },
+    {
       "Id": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\images\\RaceIcons\\Blood Elf.png",
       "PackagePath": "staticwebassets\\images\\RaceIcons\\Blood Elf.png"
     },
@@ -135,6 +139,10 @@
     {
       "Id": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\images\\RaceIcons\\Worgen.png",
       "PackagePath": "staticwebassets\\images\\RaceIcons\\Worgen.png"
+    },
+    {
+      "Id": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\images\\RaceIcons\\heroku-x64.exe",
+      "PackagePath": "staticwebassets\\images\\RaceIcons\\heroku-x64.exe"
     },
     {
       "Id": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\js\\site.js",

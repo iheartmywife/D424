@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ABFrMpdHc95ka91apyF+Q3WYpDPdjhLTxTgi/qQ+tTQ=",
+  "Hash": "ViRG/V1GrJKsQ4yyOPJdYORcVmt75AL+sO/70ivxzp8=",
   "Source": "helpmepickmymain",
   "BasePath": "_content/helpmepickmymain",
   "Mode": "Default",
@@ -378,6 +378,25 @@
       "OriginalItemSpec": "wwwroot\\images\\FactionIcons\\Horde.png"
     },
     {
+      "Identity": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\images\\RaceIcons\\AWSCLIV2.msi",
+      "SourceId": "helpmepickmymain",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\",
+      "BasePath": "_content/helpmepickmymain",
+      "RelativePath": "images/RaceIcons/AWSCLIV2.msi",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\RaceIcons\\AWSCLIV2.msi"
+    },
+    {
       "Identity": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\images\\RaceIcons\\Blood Elf.png",
       "SourceId": "helpmepickmymain",
       "SourceType": "Discovered",
@@ -509,6 +528,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\RaceIcons\\Goblin.png"
+    },
+    {
+      "Identity": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\images\\RaceIcons\\heroku-x64.exe",
+      "SourceId": "helpmepickmymain",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\",
+      "BasePath": "_content/helpmepickmymain",
+      "RelativePath": "images/RaceIcons/heroku-x64.exe",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\RaceIcons\\heroku-x64.exe"
     },
     {
       "Identity": "C:\\WGU\\D424\\KJC\\helpmepickmymain\\wwwroot\\images\\RaceIcons\\Human.png",
