@@ -22,7 +22,6 @@ namespace helpmepickmymain.Controllers
         }
 
 
-        // COMMENTS TO EVALUATOR: THIS CODE IS TESTED IN FIRST TEST
         [HttpPost]
         public async Task<IActionResult> Login(AdminLogin adminLogin)
         {
@@ -37,7 +36,6 @@ namespace helpmepickmymain.Controllers
             return View();
         }
 
-        // COMMENTS TO EVALUATOR: THIS CODE IS TESTED IN SECOND TEST
         [HttpGet]
         public async Task<IActionResult> Logout()
         {

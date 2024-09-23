@@ -233,7 +233,7 @@ namespace helpmepickmymain.Controllers
         }
 
 
-        //COMMENTS TO EVALUATOR: TO BE DEVELOPED LATER AS A PASSION PROJECT.
+        //TO BE DEVELOPED LATER AS A PASSION PROJECT.
 
         //[HttpGet]
         //public async Task<IActionResult> GameplayOnly()

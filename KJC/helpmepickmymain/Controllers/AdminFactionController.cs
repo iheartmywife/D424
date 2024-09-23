@@ -23,7 +23,6 @@ namespace helpmepickmymain.Controllers
         [HttpGet]
         public async Task<IActionResult> Add()
         {
-            //UNCOMMENT WHEN YOU IMPLEMENT THE CORRESPONDING CLASS
 
             var races = await raceRepository.GetAllRacesAsync();
 
@@ -128,11 +127,9 @@ namespace helpmepickmymain.Controllers
 
             if (updatedFaction != null)
             {
-                //show success notification
                 return RedirectToAction("List");
             }
 
-            //show error notification
             return RedirectToAction("Edit", new { id = editFactionRequest.Id });
         }
 
@@ -146,12 +143,9 @@ namespace helpmepickmymain.Controllers
 
                 if (deletedFaction != null)
                 {
-                    //show success notification
                     return RedirectToAction("List");
                 }
-                //show error notification
                 return RedirectToAction("Edit", new { id = editFactionRequest.Id });
-                //display response
             }
             catch (Exception e)
             {

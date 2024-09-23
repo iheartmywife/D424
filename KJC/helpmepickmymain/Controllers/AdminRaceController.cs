@@ -12,7 +12,7 @@ namespace helpmepickmymain.Controllers
         private readonly IFactionRepository factionRepository;
         private readonly IWowClassRepository wowClassRepository;
 
-        public AdminRaceController(IRaceRepository raceRepository, IFactionRepository factionRepository, IWowClassRepository wowClassRepository) //TO-DO: IMPLEMENT FACTION AND CLASS REPOS
+        public AdminRaceController(IRaceRepository raceRepository, IFactionRepository factionRepository, IWowClassRepository wowClassRepository)
         {
             this.raceRepository = raceRepository;
             this.factionRepository = factionRepository;
@@ -22,7 +22,6 @@ namespace helpmepickmymain.Controllers
         [HttpGet]
         public async Task<IActionResult> Add()
         {
-            //UNCOMMENT WHEN YOU IMPLEMENT THE CORRESPONDING CLASS
 
             var factions = await factionRepository.GetAllFactionsAsync();
             var wowClasses = await wowClassRepository.GetAllWowClassesAsync();
@@ -32,7 +31,6 @@ namespace helpmepickmymain.Controllers
                 AvailableFactions = factions.Select(x => new SelectListItem { Text = x.Name, Value = x.Id.ToString() }),
                 AvailableWowClasses = wowClasses.Select(x => new SelectListItem { Text = x.Name, Value = x.Id.ToString() })
             };
-            //TO DO ADD MODEL TO THE VIEW
             return View(model);
         }
 
@@ -68,7 +66,6 @@ namespace helpmepickmymain.Controllers
             {
                 race.Faction = selectedFaction;
             }
-            //todo: Add in class!
 
             await raceRepository.AddRaceAsync(race);
 
@@ -154,11 +151,9 @@ namespace helpmepickmymain.Controllers
 
             if (updatedRace != null)
             {
-                //show success notification
                 return RedirectToAction("List");
             }
 
-            //show error notification
             return RedirectToAction("Edit", new { id = editRaceRequest.Id });
         }
 

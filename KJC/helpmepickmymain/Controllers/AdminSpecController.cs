@@ -144,11 +144,9 @@ namespace helpmepickmymain.Controllers
 
             if (updatedSpec != null)
             {
-                //show success notification
                 return RedirectToAction("List");
             }
 
-            //show error notification
             return RedirectToAction("Edit", new { id = editSpecRequest.Id});
         }
 
@@ -160,10 +158,8 @@ namespace helpmepickmymain.Controllers
 
             if (deletedSpec != null)
             {
-                //show success notification
                 return RedirectToAction("List");
             }
-            //show error notification
             return RedirectToAction("Edit", new { id = editSpecRequest.Id });
             //display response
         }

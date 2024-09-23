@@ -77,13 +77,13 @@ namespace helpmepickmymain.Controllers
 
             var updatedRole = await roleRepository.UpdateRoleAsync(role);
 
+            //For Success/Failure Notifications should we add them later
+
             if (updatedRole != null)
             {
-                //show success notification
             }
             else
             {
-                //show failure notification
             }
 
             return RedirectToAction("Edit", new { id = editRoleRequest.Id });
@@ -97,11 +97,9 @@ namespace helpmepickmymain.Controllers
             if (deletedRole != null)
             {
 
-                //show success notification
                 return RedirectToAction("List");
             }
 
-            //show error notifcation
             return RedirectToAction("Edit", new { id = editRoleRequest.Id });
         }
     }

@@ -205,11 +205,9 @@ namespace helpmepickmymain.Controllers
 
             if (updatedWowClass != null)
             {
-                //show success notification
                 return RedirectToAction("List");
             }
 
-            //show error notification
             return RedirectToAction("Edit", new { id = editWowClassRequest.Id });
         }
 
@@ -224,10 +222,8 @@ namespace helpmepickmymain.Controllers
 
                 if (deletedWowClass != null)
                 {
-                    //show success notification
                     return RedirectToAction("List");
                 }
-                //show error notification
                 return RedirectToAction("Edit", new { id = editWowClassRequest.Id });
                 //display response
             }

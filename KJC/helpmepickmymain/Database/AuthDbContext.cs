@@ -29,10 +29,10 @@ namespace helpmepickmymain.Database
             var adminUserId = "0020b04d-9e61-498f-8f2e-33721079ae4d";
             var adminIdentityUser = new IdentityUser
             {
-                UserName = "helpmepickmymain",
-                Email = "kcherma@wgu.edu",
-                NormalizedEmail = "kcherma@wgu.edu".ToUpper(),
-                NormalizedUserName = "helpmepickmymain".ToUpper(),
+                UserName = "Hi Github",
+                Email = "HiGithub@wgu.edu",
+                NormalizedEmail = "HiGithub@wgu.edu".ToUpper(),
+                NormalizedUserName = "Hi Github".ToUpper(),
                 Id = adminUserId,
             };
 

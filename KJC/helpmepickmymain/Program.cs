@@ -51,6 +51,8 @@ Log.Logger = new LoggerConfiguration()
 
 builder.Host.UseSerilog();
 
+//saving for future experimentation/development with openAI
+
 //builder.Services.AddHttpClient<OpenAi>(client =>
 //{
 //    client.BaseAddress = new Uri("https://api.openai.com/v1/");

@@ -25,12 +25,12 @@
                 <div class="mb-3">
                     <label class="form-label">Name</label>
                     <input type="text" class="form-control" id="name" asp-for="Name" />
-                </div>
+                </div>@* 
                 <div class="mb-3">
-                    <label class="form-label">Class (currently unavailable to edit)</label>
+                    <label class="form-label">Class</label>
                     <select class="form-select" asp-items="@Model.AvailableWowClasses" asp-for="SelectedWowClass" readonly>
                     </select>
-                </div>
+                </div> *@
                 <div class="mb-3">
                     <label class="form-label">Role</label>
                     <select class="form-select" asp-items="@Model.AvailableRoles" asp-for="SelectedRole" readonly>
@@ -52,19 +52,3 @@
     <p>Specs not found</p>
     }
 </div>
-        
-
-@*  public Guid Id { get; set; }
-    public string Name { get; set; }
-    public Role Role { get; set; }
-    public WowClass WowClass { get; set; }
-    public string WowheadLink { get; set; }
-
-    // Display Available Roles / Classes
-
-    public IEnumerable<SelectListItem>
-    AvailableRoles { get; set; }
-    public string SelectedRole { get; set; }
-    public IEnumerable<SelectListItem>
-    AvailableWowClasses { get; set; }
-    public string SelectedWowClass { get; set; } *@
